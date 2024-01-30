@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Kanit } from "next/font/google";
 import "./globals.css";
 
-const inter = Space_Grotesk({ subsets: ["latin"] });
+// weight: "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900" | ("100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900")[]; style?: "normal" | "italic" | ("normal" | "italic")[] | undefined; ... 5 more ...; subsets?: ("latin" | ... 2 more ... | "vietnamese")[] | undefined; }'.
+//   Property 'weight' is missing in type '{ subsets: "latin"[]; }' but required in type '{ weight: "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900" | ("100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900")[]; style?: "normal" | "italic" | ("normal" | "italic")[] | undefined; ... 5 more ...; subsets?: ("latin" | ... 2 more ... | "vietnamese")[] | undefined;
+
+const inter = Kanit({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  subsets: ["vietnamese", "latin"],
+  preload: true,
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
