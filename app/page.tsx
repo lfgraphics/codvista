@@ -76,10 +76,10 @@ export default function App() {
               Unlock Digital Success with Cod Vista!
             </h1>
             <p className="text-lg mb-6 pointer-events-none">
-              Your digital journey begins here at Cod Vista – where brilliance
-              meets speed. From stunning websites to robust cybersecurity, we've
-              got it all. Ready to transform your online presence? Let's make it
-              happen!
+              We elevate your brand through world-class digital experiences. We
+              build transformative digital experiences by blending design,
+              marketing, and technology. From robust cybersecurity to unique
+              brand identity, we offer a complete suite of solutions.
             </p>
             <p>
               <span className="select-none pointer-events-none">
