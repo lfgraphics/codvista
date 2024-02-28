@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Cod Vista",
   description: "A full-services digital transformation partner",
   openGraph: {
-    images: ["https://codvista.com/logo.jpg"],
+    images: ["https://codvista.com/logo.png"],
   },
   metadataBase: new URL("https://codvista.com"),
 };
