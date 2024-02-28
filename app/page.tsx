@@ -70,17 +70,6 @@ const faqs: FAQItem[] = [
   },
 ];
 
-declare namespace JSX {
-  interface IntrinsicElements {
-    // Add the declaration for the marquee element
-    marquee: React.DetailedHTMLProps<
-      React.HTMLAttributes<HTMLMarqueeElement>,
-      HTMLMarqueeElement
-    >;
-  }
-}
-
-
 
 export default function App() {
   return (

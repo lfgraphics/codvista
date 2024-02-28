@@ -1,5 +1,5 @@
 import Link from "next/link";
-import"../css/redirectbtn.css";
+import "../css/redirectBtn.css";
 
 interface ActionButtonProps {
   text: string;
