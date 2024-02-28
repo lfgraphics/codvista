@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: ["https://www.codvista.com/logo.png"],
   },
-  metadataBase: new URL("https://codvista.com"),
+  metadataBase: new URL("https://www.codvista.com"),
 };
 
 export default function RootLayout({

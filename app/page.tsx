@@ -4,7 +4,7 @@ import Container from "@/components/ui/container";
 import Spline from "@splinetool/react-spline";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronsRight } from "lucide-react";
+import { ChevronsRight, Star } from "lucide-react";
 import RedirectButton from "@/components/ui/redirectButton";
 import FAQs from "@/components/Faqs";
 
@@ -70,8 +70,11 @@ const faqs: FAQItem[] = [
   },
 ];
 
-
 export default function App() {
+  const averageRating = 4.14; // Example average rating
+
+  // Calculate the width of the stars div based on the average rating
+  const starWidth = (averageRating / 5) * 100; // Convert the rating to a percentage
   return (
     <>
       {/* Landing page */}
@@ -138,8 +141,35 @@ export default function App() {
                 Leading companies trust us to design their products
               </h3>
               <marquee behavior="scroll" direction="left">
-                Images of companies we've worked with (will add soon)
+                Images of companies we've worked with (will add shortly)
               </marquee>
+            </div>
+            <div className="my-4 testimonials">
+              <h3 className="text-3xl">Testimonials</h3>
+
+              working on it
+                <div className="relative rounded-lg p-2">
+                  {/* Background gradient */}
+                  <div
+                    className="absolute top-0 left-0 w-full h-full rounded-lg"
+                    style={{
+                      background: `linear-gradient(to right, #FFD700 ${starWidth}%, transparent ${starWidth}%)`,
+                    }}
+                  />
+                  {/* Stars div */}
+                  <div className="flex items-center bg-clip-content">
+                    {[...Array(5)].map((_, index) => (
+                      <Star
+                        key={index}
+                        // filled={index < Math.floor(averageRating)}
+                      />
+                    ))}
+                  </div>
+                  {/* Average rating text */}
+                  <p className="text-sm text-gray-600 mt-1">
+                    Average Rating: {averageRating.toFixed(2)} out of 5
+                  </p>
+                </div>
             </div>
             <h2 className="text-3xl font-bold my-4">Services we offer</h2>
             <div className="servicesDivs">

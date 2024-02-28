@@ -21,7 +21,7 @@ const FAQs = ({ faqs }: { faqs: FAQItem[] }) => {
         >
           <button
             onClick={() => toggleAccordion(index)}
-            className={`flex justify-between items-center w-full p-4 ] ${
+            className={`flex justify-between items-center w-full py-2 ${
               openIndex === index ? "bg-transparent" : ""
             }`}
           >
