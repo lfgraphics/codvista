@@ -13,6 +13,10 @@ const inter = Kanit({
 export const metadata: Metadata = {
   title: "Cod Vista",
   description: "A full-services digital transformation partner",
+  openGraph: {
+    images: ["https://codvista.com/logo.jpg"],
+  },
+  metadataBase: new URL("https://codvista.com"),
 };
 
 export default function RootLayout({
