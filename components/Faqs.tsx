@@ -17,7 +17,9 @@ const FAQs = ({ faqs }: { faqs: FAQItem[] }) => {
       {faqs.map((faq, index) => (
         <div
           key={index}
-          className={`${openIndex === index ? "border-b border-gray-200" : ""} my-2`}
+          className={`${
+            openIndex === index ? "border-b border-gray-200" : ""
+          } my-2`}
         >
           <button
             onClick={() => toggleAccordion(index)}

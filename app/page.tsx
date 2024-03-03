@@ -4,7 +4,15 @@ import Container from "@/components/ui/container";
 import Spline from "@splinetool/react-spline";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronsRight, Star } from "lucide-react";
+import {
+  ChevronsRight,
+  Code2,
+  LineChart,
+  ShieldCheck,
+  Star,
+  Terminal,
+  Wand2,
+} from "lucide-react";
 import RedirectButton from "@/components/ui/redirectButton";
 import FAQs from "@/components/Faqs";
 
@@ -71,17 +79,13 @@ const faqs: FAQItem[] = [
 ];
 
 export default function App() {
-  const averageRating = 4.14; // Example average rating
-
-  // Calculate the width of the stars div based on the average rating
-  const starWidth = (averageRating / 5) * 100; // Convert the rating to a percentage
   return (
     <>
-      {/* Landing page */}
+      {/* Hero Section */}
       <div className="mt-14 relative w-full text-white overflow-hidden z-40">
         <Container>
           <div className="flex flex-col md:flex-row w-full gap-4 items-center justify-center">
-            <div className="max-w-lg  p-8 sm:left-9 z-20  sm:ml-11">
+            <div className="max-w-lg  py-16 sm:left-9 z-20  sm:ml-11">
               - This site is under development
               <h1 className="text-5xl mb-4" style={{ fontWeight: "600" }}>
                 Unlock Digital Success with Cod Vista!
@@ -103,7 +107,6 @@ export default function App() {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 425.84 276.83"
                 width={600}
-                // height={500}
               >
                 <g id="Layer_2" data-name="Layer 2">
                   <g id="Layer_1-2" data-name="Layer 1">
@@ -143,7 +146,7 @@ export default function App() {
                       width="37.03"
                       height="37.03"
                     />
-                    <a href="/services/dev" className="cursor-pointer">
+                    <a href="/services/web-app-development" className="cursor-pointer">
                       <rect
                         className="cls-2  fill-blue-600"
                         x="179.05"
@@ -384,38 +387,8 @@ export default function App() {
             </div>
           </div>
         </Container>
-        {/* <Container>
-          <div className="absolute max-w-lg h-[85svh] p-8 sm:left-9 z-20  sm:ml-11">
-            - This site is under development
-            <h1 className="text-5xl mb-4" style={{ fontWeight: "600" }}>
-              Unlock Digital Success with Cod Vista!
-            </h1>
-            <p className="text-lg mb-6">
-              We elevate your brand through world-class digital experiences. We
-              build transformative digital experiences by blending design,
-              marketing, and technology.
-              <br />
-              From robust cybersecurity to unique brand identity, we offer a
-              complete suite of solutions.
-            </p>
-            <div className="opacity-60 absolute bottom-2 w-[30ch] md:w-max p-2 text-center rounded-full border">
-              You can move the 3D object with two fingers or with your mouse
-              cilcked!
-            </div>
-          </div>
-          <div className="z-50 absolute bottom-44 left-12 md:left-28">
-            <ActionButton text="Get Started" />
-          </div>
-        </Container> */}
-        {/* <Spline
-          className="absolute top-0 md:-right-40 w-[90vw] z-10 scale-[2]"
-          scene="https://prod.spline.design/KhvQam3gbhW9361A/scene.splinecode"
-        /> */}
-        {/* need to fix the sharp ending  */}
-        {/* <div className="absolute top-28 sm:top-32 right-8 md:top-32 md:right-96 blur-2xl bg-blend-lighten z-0 ">
-          <Image src="/colorLogo.svg" width="300" height="400" alt="" />
-        </div> */}
       </div>
+      {/* Main Content */}
       <Container>
         <main>
           <div className="text-center mb-8">
@@ -449,43 +422,16 @@ export default function App() {
                 Images of companies we've worked with (will add shortly)
               </marquee>
             </div>
-            {/*
-             <div className="my-4 testimonials">
-              <h3 className="text-3xl">Testimonials</h3>
-
-              working on it
-                <div className="relative rounded-lg p-2">
-                  {/* Background gradient 
-                  <div
-                    className="absolute top-0 left-0 w-full h-full rounded-lg"
-                    style={{
-                      background: `linear-gradient(to right, #FFD700 ${starWidth}%, transparent ${starWidth}%)`,
-                    }}
-                  />
-                  {/* Stars div *
-                  <div className="flex items-center bg-clip-content">
-                    {[...Array(5)].map((_, index) => (
-                      <Star
-                        key={index}
-                        // filled={index < Math.floor(averageRating)}
-                      />
-                    ))}
-                  </div>
-                  {/* Average rating text 
-                  <p className="text-sm text-gray-600 mt-1">
-                    Average Rating: {averageRating.toFixed(2)} out of 5
-                  </p>
-                </div>
-            </div> 
-            */}
+            <div className="review my-4">
+            </div>
             <h2 className="text-3xl font-bold my-4">Services we offer</h2>
             <div className="servicesDivs">
               <div className="digital-marketing my-6 min-h-[75svh] flex items-center">
                 <div>
-                  <h4 className="text-left text-2xl font-bold mb-4">
-                    Digital Marketing
+                  <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
+                    <LineChart size={32} /> Digital Marketing
                   </h4>
-                  <div className="service-div even flex flex-col justify-center items-center md:items-end md:flex-row gap-4">
+                  <div className="service-div even flex flex-col justify-center items-center md:items-center md:flex-row gap-4">
                     <div className="left text md:max-w-[50%]">
                       <p className="text-left">
                         We’re not just another digital marketing agency that
@@ -515,15 +461,15 @@ export default function App() {
                         <span className="block m-4">
                           <RedirectButton
                             text="Know More"
-                            url="/services/graphic-design"
+                            url="/services/digital-marketing"
                           />
                         </span>
                       </p>
                     </div>
-                    <div className="right w-[90%] overflow-hidden rounded-xl">
+                    <div className="right w-[90%] overflow-hidden rounded-xl max-h-[400px] flex items-center">
                       <Image
                         className="w-full"
-                        src={"/home-page/digital-marketing.png"}
+                        src={"/home-page/marketing.jpg"}
                         alt={""}
                         width={400}
                         height={350}
@@ -534,10 +480,10 @@ export default function App() {
               </div>
               <div className="graphic-design my-6 min-h-[75svh] flex items-center">
                 <div>
-                  <h4 className="text-left text-2xl font-bold mb-4">
-                    Graphic Design
+                  <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
+                    <Wand2 size={32} /> Graphic Design
                   </h4>
-                  <div className="service-div odd flex flex-col justify-center items-center md:items-end md:flex-row-reverse gap-4">
+                  <div className="service-div odd flex flex-col justify-center items-center md:items-center md:flex-row-reverse gap-4">
                     <div className="left-text md:max-w-[50%]">
                       <p className="text-left">
                         There's no limit to what you can get designed at Cod
@@ -563,10 +509,10 @@ export default function App() {
                         </span>
                       </p>
                     </div>
-                    <div className="right w-[90%] overflow-hidden rounded-xl">
+                    <div className="right w-[90%] overflow-hidden rounded-xl max-h-[400px] flex items-center">
                       <Image
                         className="w-full"
-                        src={"/home-page/digital-marketing.png"}
+                        src={"/home-page/gfx.jpg"}
                         alt={""}
                         width={400}
                         height={350}
@@ -577,10 +523,10 @@ export default function App() {
               </div>
               <div className="development my-6 min-h-[75svh] flex items-center">
                 <div>
-                  <h4 className="text-left text-2xl font-bold mb-4">
-                    Web & App Development
+                  <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
+                    <Code2 size={32} /> Web & App Development
                   </h4>
-                  <div className="service-div even flex flex-col justify-center items-center md:items-end md:flex-row gap-4">
+                  <div className="service-div even flex flex-col justify-center items-center md:items-center md:flex-row gap-4">
                     <div className="left text md:max-w-[50%]">
                       <p className="text-left">
                         In today's digital era, having a professional website or
@@ -606,15 +552,15 @@ export default function App() {
                         <span className="block m-4">
                           <RedirectButton
                             text="Know More"
-                            url="/services/dev"
+                            url="/services/web-app-development"
                           />
                         </span>
                       </p>
                     </div>
-                    <div className="right w-[90%] overflow-hidden rounded-xl">
+                    <div className="right w-[90%] overflow-hidden rounded-xl max-h-[400px] flex items-center">
                       <Image
                         className="w-full"
-                        src={"/home-page/digital-marketing.png"}
+                        src={"/home-page/dev.jpg"}
                         alt={""}
                         width={400}
                         height={350}
@@ -625,10 +571,10 @@ export default function App() {
               </div>
               <div className="cybersecurity my-6 min-h-[75svh] flex items-center">
                 <div>
-                  <h4 className="text-left text-2xl font-bold mb-4">
-                    Cybersecurity
+                  <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
+                    <ShieldCheck size={32} /> Cybersecurity
                   </h4>
-                  <div className="service-div odd flex flex-col justify-center items-center md:items-end md:flex-row-reverse gap-4">
+                  <div className="service-div odd flex flex-col justify-center items-center md:items-center md:flex-row-reverse gap-4">
                     <div className="left-text md:max-w-[50%]">
                       <p className="text-left">
                         <strong>Dangers lie behind every click,</strong> Cod
@@ -667,10 +613,10 @@ export default function App() {
                         </span>
                       </p>
                     </div>
-                    <div className="right w-[90%] overflow-hidden rounded-xl">
+                    <div className="right w-[90%] overflow-hidden rounded-xl max-h-[400px] flex items-center">
                       <Image
                         className="w-full"
-                        src={"/home-page/digital-marketing.png"}
+                        src={"/home-page/security.jpg"}
                         alt={""}
                         width={400}
                         height={350}
@@ -682,6 +628,7 @@ export default function App() {
             </div>
           </div>
         </main>
+        {/* Faqs */}
         <div className="container mx-auto py-8">
           <h1 className="text-3xl font-bold mb-4">
             Frequently Asked Questions
