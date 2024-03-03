@@ -85,6 +85,7 @@ export default function App() {
       <div className="mt-14 relative w-full text-white overflow-hidden z-40">
         <Container>
           <div className="flex flex-col md:flex-row w-full gap-4 items-center justify-center">
+            {/* hero text and CTA*/}
             <div className="max-w-lg  py-16 sm:left-9 z-20  sm:ml-11">
               - This site is under development
               <h1 className="text-5xl mb-4" style={{ fontWeight: "600" }}>
@@ -102,6 +103,7 @@ export default function App() {
                 <ActionButton text="Get Started" />
               </div>
             </div>
+            {/* hero Image area */}
             <div className="w-full flex justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +148,10 @@ export default function App() {
                       width="37.03"
                       height="37.03"
                     />
-                    <a href="/services/web-app-development" className="cursor-pointer">
+                    <a
+                      href="/services/web-app-development"
+                      className="cursor-pointer"
+                    >
                       <rect
                         className="cls-2  fill-blue-600"
                         x="179.05"
@@ -392,38 +397,44 @@ export default function App() {
       <Container>
         <main>
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold my-4 mt-2">
-              Cod Vista– A full-service digital transformation partner.
-            </h2>
-            <p className="text-gray-200 text-left">
-              To produce the optimal outcomes you need a partner to trust, an
-              expert who can guide you to the right strategy, take charge of the
-              process, and deliver results that your customers will love. Cod
-              Vista comprises experienced professionals, including creatives,
-              strategists, technologists, and problem-solvers. Using a
-              human-centered approach we empathize with your customers, identify
-              their pain points, and create solutions that enhance their
-              experience with your brand or product.
-            </p>
-            <p className="text-gray-200 text-left">
-              And just as an architect would provide a full set of blueprints
-              for a building, we provide full specifications for the digital
-              experiences we design. This gives our clients a clear picture of
-              the project, ensuring a smooth development process.
-            </p>
-            <div className="text-left mb-8">
-              New Project? <ActionButton text="Get in Touch" />
+            <div className="mini-intro-of-starting">
+              <h2 className="text-3xl font-bold my-4 mt-2">
+                Cod Vista– A full-service digital transformation partner.
+              </h2>
+              <p className="text-gray-200 text-left">
+                To produce the optimal outcomes you need a partner to trust, an
+                expert who can guide you to the right strategy, take charge of
+                the process, and deliver results that your customers will love.
+                Cod Vista comprises experienced professionals, including
+                creatives, strategists, technologists, and problem-solvers.
+                Using a human-centered approach we empathize with your
+                customers, identify their pain points, and create solutions that
+                enhance their experience with your brand or product.
+              </p>
+              <p className="text-gray-200 text-left">
+                And just as an architect would provide a full set of blueprints
+                for a building, we provide full specifications for the digital
+                experiences we design. This gives our clients a clear picture of
+                the project, ensuring a smooth development process.
+              </p>
+              <div className="text-left mb-8">
+                New Project? <ActionButton text="Get in Touch" />
+              </div>
             </div>
+
             <div className="my-4 companies-show-case">
               <h3 className="text-3xl">
                 Leading companies trust us to design their products
               </h3>
-              <marquee behavior="scroll" direction="left">
-                Images of companies we've worked with (will add shortly)
-              </marquee>
+              <div className="my-4">
+                <marquee behavior="scroll" direction="left">
+                  Images of companies we've worked with (will add shortly)
+                </marquee>
+              </div>
             </div>
-            <div className="review my-4">
-            </div>
+
+            <div className="review my-4"></div>
+
             <h2 className="text-3xl font-bold my-4">Services we offer</h2>
             <div className="servicesDivs">
               <div className="digital-marketing my-6 min-h-[75svh] flex items-center">
@@ -626,10 +637,11 @@ export default function App() {
                 </div>
               </div>
             </div>
+
           </div>
         </main>
         {/* Faqs */}
-        <div className="container mx-auto py-8">
+        <div className="mx-auto py-8">
           <h1 className="text-3xl font-bold mb-4">
             Frequently Asked Questions
           </h1>
