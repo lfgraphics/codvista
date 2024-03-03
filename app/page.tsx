@@ -97,139 +97,290 @@ export default function App() {
               <div className="z-50 bottom-44 left-12 md:left-28">
                 <ActionButton text="Get Started" />
               </div>
-              {/* <div className="opacity-60 bottom-2 w-[30ch] md:w-max p-2 text-center rounded-full border">
-                You can move the 3D object with two fingers or with your mouse
-                cilcked!
-              </div> */}
             </div>
             <div className="w-full flex justify-center">
-              {/* <Image src={"/hero.svg"} alt="hero Image" width={600} height={400} /> */}
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425.84 276.83">
-	<defs>
-		<style>
-			{/* .cls-1,.cls-3{fill:#fff;}.cls-2,.cls-4{fill:none;stroke:#fff;stroke-miterlimit:10;}.cls-2{stroke-width:0.75px;}.cls-3{font-size:7.25px;font-family:MyriadPro-Regular, Myriad Pro;}.cls-4{stroke-width:0.5px;} */}
-		</style>
-	</defs>
-	<g id="Layer_2" data-name="Layer 2">
-		<g id="Layer_1-2" data-name="Layer 1">
-			<g id="Layer_1-2-2" data-name="Cod Vista Logo">
-				<path className="cls-1" d="M203.78,135.28c0,.15,0,.27,0,.39,0,2.29,0,4.59,0,6.89v.52a3.36,3.36,0,0,1,.36,0H205l.3,0v-.29c0-.45,0-.9,0-1.35v-1.69l.93,0v3.21a.12.12,0,0,0,.12.12h.08l.84,0a.3.3,0,0,0,.3-.29,2.2,2.2,0,0,0,0-.36c0-.9,0-1.81,0-2.71,0-.68-.26-.95-.95-1a1.25,1.25,0,0,1-1-.35,1.07,1.07,0,0,1-.35-.77c0-.7,0-1.4,0-2.1a1,1,0,0,1,.54-.91,2.13,2.13,0,0,1,2.1,0,1.21,1.21,0,0,1,.65,1.12c0,.31,0,.8,0,1.11h-.93c0-.28,0-.76,0-1a.45.45,0,0,0-.42-.5,1.37,1.37,0,0,0-.36,0c-.51,0-.68.19-.68.7s0,1,0,1.48c0,.3,0,.35.35.35a1.91,1.91,0,0,1,1.51.62,1.6,1.6,0,0,1,.43,1.08c0,1.07,0,2.14,0,3.21a1.45,1.45,0,0,1-.24.75,1.13,1.13,0,0,0,.06,1.39A2.65,2.65,0,0,0,211,146a2.55,2.55,0,0,0,2.12-2.11c.35-2,.68-3.92,1-5.88.14-.82.27-1.65.4-2.48a1,1,0,0,0,0-.18h-3a2.09,2.09,0,0,0,0,.25q0,4,0,8c0,.11,0,.3,0,.3h-1v-8.62H209v-.91h6.82c.24,0,.32.06.38.31.53,2.52,1.08,5,1.63,7.55a1.41,1.41,0,0,1-2.65.9,5.4,5.4,0,0,1-.13-1.07v-.11h.9l0,.26c0,.16,0,.32,0,.48a.4.4,0,0,0,.44.38c.29-.05.53-.3.47-.54-.1-.47-.22-.93-.35-1.38a.25.25,0,0,0-.18-.14c-.56,0-1.13,0-1.69,0-.15,0-.17.09-.19.2-.15.92-.3,1.84-.47,2.76a3.58,3.58,0,0,1-3.19,3,3.53,3.53,0,0,1-3.75-2.46c-.12-.42-.12-.42-.55-.42l-5.83,0a.42.42,0,0,1-.48-.37c-.23-.83-.48-1.66-.7-2.49q-.82-3.18-1.63-6.37c0-.12-.05-.31-.09-.46h.9c.48,1.86,1,3.81,1.49,5.66l.27.95-.08-6.61h.95V135s0,5.18,0,7.76c0,.08,0,.29,0,.29h1.49s0-.25,0-.35v-7.28a.57.57,0,0,0,0-.13c-.32,0-.67,0-1,0v-1h3.08v1Zm11,4.72h1.56c-.29-1.36-.61-2.7-.9-4Z" />
-				<path className="cls-1" d="M208.59,132.62h1.74c.16,0,.18-.08.18-.22,0-.42,0-.85,0-1.28q0-3.81,0-7.61v-.26a1.61,1.61,0,0,1,.22,0h1.5a2.36,2.36,0,0,1,2.52,2.39c0,1.89.05,3.79,0,5.68a2.28,2.28,0,0,1-1.29,1.9,2.51,2.51,0,0,1-1.31.36H200.5v-.94H205l-.21-.28a2.6,2.6,0,0,1-.62-1.76c0-1.59,0-3.19,0-4.78a2.56,2.56,0,0,1,1.78-2.47,2.62,2.62,0,0,1,3.36,2.49c0,1.68,0,3.36,0,5a2.26,2.26,0,0,1-.61,1.58Zm-.21-4.33h0v-2.54a1.57,1.57,0,0,0-.29-.88,1.6,1.6,0,0,0-1.77-.67,1.55,1.55,0,0,0-1.17,1.51c0,.59,0,1.19,0,1.79v3.11a1.71,1.71,0,0,0,.87,1.57,1.6,1.6,0,0,0,2.36-1.3c0-.87,0-1.73,0-2.59Zm3.07-4.14v8.23c0,.17.05.24.23.23s.44,0,.65,0a1.61,1.61,0,0,0,1.5-1.57c0-1.56,0-3.11,0-4.67a6.58,6.58,0,0,0,0-.89,1.3,1.3,0,0,0-1-1.19A9.84,9.84,0,0,0,211.45,124.15Z" />
-				<path className="cls-1" d="M203.08,129.63s0,.91,0,1.12a3.07,3.07,0,0,1-6.12,0c-.09-1.37-.05-2.76,0-4.13a6.18,6.18,0,0,1,.15-1.49,2.59,2.59,0,0,1,2.38-1.9c1.13,0,2.19,0,3.32,0H203v.92l-3.26,0a1.92,1.92,0,0,0-1.34.44,1.73,1.73,0,0,0-.54,1.35c0,1.5,0,3,0,4.5a2.07,2.07,0,0,0,1.17,2,2.14,2.14,0,0,0,3.06-1.62c0-.25.07-1.22.07-1.22Z" />
-				<path className="cls-1" d="M215,132.52a11.13,11.13,0,0,0,1-1.28,5.8,5.8,0,0,0-.27-6.66l-.51-.66c.25-.14.47-.28.7-.4,0,0,.14,0,.18.07a7.65,7.65,0,0,1,1.3,7,9,9,0,0,1-1.88,2.67Z" />
-				<rect className="cls-1" x="196.88" y="145.85" width="9.61" height="1.09" />
-				<path className="cls-1" d="M199.89,143.66a1.59,1.59,0,0,0-1.46,1.56,1.56,1.56,0,0,0-1.57-1.56h0a1.57,1.57,0,0,0,1.43-1.56,1.56,1.56,0,0,0,1.57,1.56" />
-			</g>
-			<rect className="cls-2" x="188.86" y="117.78" width="37.03" height="37.03" />
-			<a href="/services/dev" className="cursor-pointer">
-			<rect className="cls-2  fill-blue-600" x="179.05" y="75.25" width="56.65" height="13.27" />
-			<text className="cls-3 text" transform="translate(186.66 84.01)">
-				Development
-			</text>
-			</a>
-			<rect className="cls-2" x="259.92" y="129.66" width="56.65" height="13.27" />
-			<a href="/services/digital-marketing">
-			<text className="cls-3" transform="translate(262.07 138.43)">
-				Digital Marketing
-			</text>
-			</a>
-			<rect className="cls-2" x="98.18" y="129.66" width="56.65" height="13.27" />
-			<a href="/services/graphic-design">
-			<text className="cls-3" transform="translate(103.39 138.43)">
-				Graphic Design
-			</text>
-			</a>
-			<rect className="cls-2" x="179.05" y="173.1" width="56.65" height="13.27" />
-			<a href="/services/cybersecurity">
-			<text className="cls-3" transform="translate(186.71 181.87)">
-				Cybersecurity
-			</text>
-			</a>
-			<text className="cls-3" transform="translate(78.46 74.3)">
-				Branding
-			</text>
-			<text className="cls-3" transform="translate(35.02 107.01)">
-				Re Branding
-			</text>
-			<text className="cls-3" transform="translate(0 138.87)">
-				Print Graphics
-			</text>
-			<text className="cls-3" transform="translate(29.42 178.36)">
-				Digital Graphics
-			</text>
-			<text className="cls-3" transform="translate(307.7 68.7)">
-				Social Media management
-			</text>
-			<text className="cls-3" transform="translate(341.68 104.48)">
-				Ads and Campaigns
-			</text>
-			<text className="cls-3" transform="translate(368.46 137.98)">
-				Search Engien
-				<tspan x="0" y="8.7">
-					Optimization (SEO)
-				</tspan>
-			</text>
-			<text className="cls-3" transform="translate(334.54 179.87)">
-				Whatsapp, SMS &amp;
-				<tspan x="0" y="8.7">
-					Email Marketing
-				</tspan>
-			</text>
-			<text className="cls-3" transform="translate(123.76 6.07)">
-				Responsive Website
-			</text>
-			<text className="cls-3" transform="translate(248.81 7.5)">
-				Full Stack Development
-			</text>
-			<text className="cls-3" transform="translate(81.69 38.25)">
-				Progressive Web Apps
-			</text>
-			<text className="cls-3" transform="translate(275.49 38.25)">
-				Android and IOS App Development
-			</text>
-			<text className="cls-3" transform="translate(276.88 242.7)">
-				Web Pentesting
-			</text>
-			<text className="cls-3" transform="translate(245.35 275.02)">
-				Cloud Security
-			</text>
-			<text className="cls-3" transform="translate(87.59 238.44)">
-				Network Security
-			</text>
-			<text className="cls-3" transform="translate(60.49 204.32)">
-				Authentication
-			</text>
-			<text className="cls-3" transform="translate(133.25 273.42)">
-				Data Security
-			</text>
-			<text className="cls-3" transform="translate(309.44 207.8)">
-				DDoS
-			</text>
-			<polyline className="cls-4" points="225.45 75.25 225.45 38.25 276.32 38.25" />
-			<polyline className="cls-4" points="188.89 75.25 188.89 38.25 145.56 38.25" />
-			<polyline className="cls-4" points="152.62 6.07 152.62 21.57 199.86 21.57 199.86 75.25" />
-			<path className="cls-4" d="M214.43,75.25V21.57h46.94V6.74" />
-			<polyline className="cls-4" points="71.28 106.35 108.28 106.35 108.28 129.66" />
-			<polyline className="cls-4" points="105.58 73.79 142.58 73.79 142.58 129.66" />
-			<line className="cls-4" x1="369.16" y1="137.6" x2="316.54" y2="137.6" />
-			<polyline className="cls-4" points="335.25 175.26 303.95 175.26 303.95 142.93" />
-			<line className="cls-4" x1="41.6" y1="137.89" x2="98.18" y2="137.89" />
-			<polyline className="cls-4" points="76.98 177.38 108.28 177.38 108.28 142.93" />
-			<polyline className="cls-4" points="309.25 68.48 281.73 68.48 281.73 129.66" />
-			<polyline className="cls-4" points="342.2 104.22 305.39 104.23 305.39 129.66" />
-			<polyline className="cls-4" points="215.35 186.37 215.35 270.25 248.09 270.25" />
-			<polyline className="cls-4" points="277.35 238.08 224.03 238.08 224.03 186.37" />
-			<polyline className="cls-4" points="310.23 203.45 231.86 203.45 231.86 186.37" />
-			<polyline className="cls-4" points="172.96 270.25 207.64 270.25 207.64 186.37" />
-			<polyline className="cls-4" points="139.04 235.24 196.86 235.24 196.86 186.37" />
-			<polyline className="cls-4" points="104.98 204 187.21 204 187.21 186.37" />
-			<line className="cls-4" x1="207.87" y1="154.81" x2="207.87" y2="173.21" />
-			<line className="cls-4" x1="207.38" y1="117.78" x2="207.38" y2="88.52" />
-			<polyline className="cls-4" points="225.89 137.49 245.35 137.49 245.35 169.14 272.03 169.14 272.03 142.93" />
-			<polyline className="cls-4" points="142.58 142.93 142.58 169.14 172.96 169.14 172.96 137.49 188.89 137.49" />
-		</g>
-	</g>
-</svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 425.84 276.83"
+                width={600}
+                // height={500}
+              >
+                <g id="Layer_2" data-name="Layer 2">
+                  <g id="Layer_1-2" data-name="Layer 1">
+                    <g id="Layer_1-2-2" data-name="Cod Vista Logo">
+                      <path
+                        className="cls-1"
+                        d="M203.78,135.28c0,.15,0,.27,0,.39,0,2.29,0,4.59,0,6.89v.52a3.36,3.36,0,0,1,.36,0H205l.3,0v-.29c0-.45,0-.9,0-1.35v-1.69l.93,0v3.21a.12.12,0,0,0,.12.12h.08l.84,0a.3.3,0,0,0,.3-.29,2.2,2.2,0,0,0,0-.36c0-.9,0-1.81,0-2.71,0-.68-.26-.95-.95-1a1.25,1.25,0,0,1-1-.35,1.07,1.07,0,0,1-.35-.77c0-.7,0-1.4,0-2.1a1,1,0,0,1,.54-.91,2.13,2.13,0,0,1,2.1,0,1.21,1.21,0,0,1,.65,1.12c0,.31,0,.8,0,1.11h-.93c0-.28,0-.76,0-1a.45.45,0,0,0-.42-.5,1.37,1.37,0,0,0-.36,0c-.51,0-.68.19-.68.7s0,1,0,1.48c0,.3,0,.35.35.35a1.91,1.91,0,0,1,1.51.62,1.6,1.6,0,0,1,.43,1.08c0,1.07,0,2.14,0,3.21a1.45,1.45,0,0,1-.24.75,1.13,1.13,0,0,0,.06,1.39A2.65,2.65,0,0,0,211,146a2.55,2.55,0,0,0,2.12-2.11c.35-2,.68-3.92,1-5.88.14-.82.27-1.65.4-2.48a1,1,0,0,0,0-.18h-3a2.09,2.09,0,0,0,0,.25q0,4,0,8c0,.11,0,.3,0,.3h-1v-8.62H209v-.91h6.82c.24,0,.32.06.38.31.53,2.52,1.08,5,1.63,7.55a1.41,1.41,0,0,1-2.65.9,5.4,5.4,0,0,1-.13-1.07v-.11h.9l0,.26c0,.16,0,.32,0,.48a.4.4,0,0,0,.44.38c.29-.05.53-.3.47-.54-.1-.47-.22-.93-.35-1.38a.25.25,0,0,0-.18-.14c-.56,0-1.13,0-1.69,0-.15,0-.17.09-.19.2-.15.92-.3,1.84-.47,2.76a3.58,3.58,0,0,1-3.19,3,3.53,3.53,0,0,1-3.75-2.46c-.12-.42-.12-.42-.55-.42l-5.83,0a.42.42,0,0,1-.48-.37c-.23-.83-.48-1.66-.7-2.49q-.82-3.18-1.63-6.37c0-.12-.05-.31-.09-.46h.9c.48,1.86,1,3.81,1.49,5.66l.27.95-.08-6.61h.95V135s0,5.18,0,7.76c0,.08,0,.29,0,.29h1.49s0-.25,0-.35v-7.28a.57.57,0,0,0,0-.13c-.32,0-.67,0-1,0v-1h3.08v1Zm11,4.72h1.56c-.29-1.36-.61-2.7-.9-4Z"
+                      />
+                      <path
+                        className="cls-1"
+                        d="M208.59,132.62h1.74c.16,0,.18-.08.18-.22,0-.42,0-.85,0-1.28q0-3.81,0-7.61v-.26a1.61,1.61,0,0,1,.22,0h1.5a2.36,2.36,0,0,1,2.52,2.39c0,1.89.05,3.79,0,5.68a2.28,2.28,0,0,1-1.29,1.9,2.51,2.51,0,0,1-1.31.36H200.5v-.94H205l-.21-.28a2.6,2.6,0,0,1-.62-1.76c0-1.59,0-3.19,0-4.78a2.56,2.56,0,0,1,1.78-2.47,2.62,2.62,0,0,1,3.36,2.49c0,1.68,0,3.36,0,5a2.26,2.26,0,0,1-.61,1.58Zm-.21-4.33h0v-2.54a1.57,1.57,0,0,0-.29-.88,1.6,1.6,0,0,0-1.77-.67,1.55,1.55,0,0,0-1.17,1.51c0,.59,0,1.19,0,1.79v3.11a1.71,1.71,0,0,0,.87,1.57,1.6,1.6,0,0,0,2.36-1.3c0-.87,0-1.73,0-2.59Zm3.07-4.14v8.23c0,.17.05.24.23.23s.44,0,.65,0a1.61,1.61,0,0,0,1.5-1.57c0-1.56,0-3.11,0-4.67a6.58,6.58,0,0,0,0-.89,1.3,1.3,0,0,0-1-1.19A9.84,9.84,0,0,0,211.45,124.15Z"
+                      />
+                      <path
+                        className="cls-1"
+                        d="M203.08,129.63s0,.91,0,1.12a3.07,3.07,0,0,1-6.12,0c-.09-1.37-.05-2.76,0-4.13a6.18,6.18,0,0,1,.15-1.49,2.59,2.59,0,0,1,2.38-1.9c1.13,0,2.19,0,3.32,0H203v.92l-3.26,0a1.92,1.92,0,0,0-1.34.44,1.73,1.73,0,0,0-.54,1.35c0,1.5,0,3,0,4.5a2.07,2.07,0,0,0,1.17,2,2.14,2.14,0,0,0,3.06-1.62c0-.25.07-1.22.07-1.22Z"
+                      />
+                      <path
+                        className="cls-1"
+                        d="M215,132.52a11.13,11.13,0,0,0,1-1.28,5.8,5.8,0,0,0-.27-6.66l-.51-.66c.25-.14.47-.28.7-.4,0,0,.14,0,.18.07a7.65,7.65,0,0,1,1.3,7,9,9,0,0,1-1.88,2.67Z"
+                      />
+                      <rect
+                        className="cls-1"
+                        x="196.88"
+                        y="145.85"
+                        width="9.61"
+                        height="1.09"
+                      />
+                      <path
+                        className="cls-1"
+                        d="M199.89,143.66a1.59,1.59,0,0,0-1.46,1.56,1.56,1.56,0,0,0-1.57-1.56h0a1.57,1.57,0,0,0,1.43-1.56,1.56,1.56,0,0,0,1.57,1.56"
+                      />
+                    </g>
+                    <rect
+                      className="cls-2"
+                      x="188.86"
+                      y="117.78"
+                      width="37.03"
+                      height="37.03"
+                    />
+                    <a href="/services/dev" className="cursor-pointer">
+                      <rect
+                        className="cls-2  fill-blue-600"
+                        x="179.05"
+                        y="75.25"
+                        width="56.65"
+                        height="13.27"
+                      />
+                      <text
+                        className="cls-3 text"
+                        transform="translate(186.66 84.01)"
+                      >
+                        Development
+                      </text>
+                    </a>
+                    <rect
+                      className="cls-2"
+                      x="259.92"
+                      y="129.66"
+                      width="56.65"
+                      height="13.27"
+                    />
+                    <a href="/services/digital-marketing">
+                      <text
+                        className="cls-3"
+                        transform="translate(262.07 138.43)"
+                      >
+                        Digital Marketing
+                      </text>
+                    </a>
+                    <rect
+                      className="cls-2"
+                      x="98.18"
+                      y="129.66"
+                      width="56.65"
+                      height="13.27"
+                    />
+                    <a href="/services/graphic-design">
+                      <text
+                        className="cls-3"
+                        transform="translate(103.39 138.43)"
+                      >
+                        Graphic Design
+                      </text>
+                    </a>
+                    <rect
+                      className="cls-2"
+                      x="179.05"
+                      y="173.1"
+                      width="56.65"
+                      height="13.27"
+                    />
+                    <a href="/services/cybersecurity">
+                      <text
+                        className="cls-3"
+                        transform="translate(186.71 181.87)"
+                      >
+                        Cybersecurity
+                      </text>
+                    </a>
+                    <text className="cls-3" transform="translate(78.46 74.3)">
+                      Branding
+                    </text>
+                    <text className="cls-3" transform="translate(35.02 107.01)">
+                      Re Branding
+                    </text>
+                    <text className="cls-3" transform="translate(0 138.87)">
+                      Print Graphics
+                    </text>
+                    <text className="cls-3" transform="translate(29.42 178.36)">
+                      Digital Graphics
+                    </text>
+                    <text className="cls-3" transform="translate(307.7 68.7)">
+                      Social Media management
+                    </text>
+                    <text
+                      className="cls-3"
+                      transform="translate(341.68 104.48)"
+                    >
+                      Ads and Campaigns
+                    </text>
+                    <text
+                      className="cls-3"
+                      transform="translate(368.46 137.98)"
+                    >
+                      Search Engien
+                      <tspan x="0" y="8.7">
+                        Optimization (SEO)
+                      </tspan>
+                    </text>
+                    <text
+                      className="cls-3"
+                      transform="translate(334.54 179.87)"
+                    >
+                      Whatsapp, SMS &amp;
+                      <tspan x="0" y="8.7">
+                        Email Marketing
+                      </tspan>
+                    </text>
+                    <text className="cls-3" transform="translate(123.76 6.07)">
+                      Responsive Website
+                    </text>
+                    <text className="cls-3" transform="translate(248.81 7.5)">
+                      Full Stack Development
+                    </text>
+                    <text className="cls-3" transform="translate(81.69 38.25)">
+                      Progressive Web Apps
+                    </text>
+                    <text className="cls-3" transform="translate(275.49 38.25)">
+                      Android and IOS App Development
+                    </text>
+                    <text className="cls-3" transform="translate(276.88 242.7)">
+                      Web Pentesting
+                    </text>
+                    <text
+                      className="cls-3"
+                      transform="translate(245.35 275.02)"
+                    >
+                      Cloud Security
+                    </text>
+                    <text className="cls-3" transform="translate(87.59 238.44)">
+                      Network Security
+                    </text>
+                    <text className="cls-3" transform="translate(60.49 204.32)">
+                      Authentication
+                    </text>
+                    <text
+                      className="cls-3"
+                      transform="translate(133.25 273.42)"
+                    >
+                      Data Security
+                    </text>
+                    <text className="cls-3" transform="translate(309.44 207.8)">
+                      DDoS
+                    </text>
+                    <polyline
+                      className="cls-4"
+                      points="225.45 75.25 225.45 38.25 276.32 38.25"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="188.89 75.25 188.89 38.25 145.56 38.25"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="152.62 6.07 152.62 21.57 199.86 21.57 199.86 75.25"
+                    />
+                    <path
+                      className="cls-4"
+                      d="M214.43,75.25V21.57h46.94V6.74"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="71.28 106.35 108.28 106.35 108.28 129.66"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="105.58 73.79 142.58 73.79 142.58 129.66"
+                    />
+                    <line
+                      className="cls-4"
+                      x1="369.16"
+                      y1="137.6"
+                      x2="316.54"
+                      y2="137.6"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="335.25 175.26 303.95 175.26 303.95 142.93"
+                    />
+                    <line
+                      className="cls-4"
+                      x1="41.6"
+                      y1="137.89"
+                      x2="98.18"
+                      y2="137.89"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="76.98 177.38 108.28 177.38 108.28 142.93"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="309.25 68.48 281.73 68.48 281.73 129.66"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="342.2 104.22 305.39 104.23 305.39 129.66"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="215.35 186.37 215.35 270.25 248.09 270.25"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="277.35 238.08 224.03 238.08 224.03 186.37"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="310.23 203.45 231.86 203.45 231.86 186.37"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="172.96 270.25 207.64 270.25 207.64 186.37"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="139.04 235.24 196.86 235.24 196.86 186.37"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="104.98 204 187.21 204 187.21 186.37"
+                    />
+                    <line
+                      className="cls-4"
+                      x1="207.87"
+                      y1="154.81"
+                      x2="207.87"
+                      y2="173.21"
+                    />
+                    <line
+                      className="cls-4"
+                      x1="207.38"
+                      y1="117.78"
+                      x2="207.38"
+                      y2="88.52"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="225.89 137.49 245.35 137.49 245.35 169.14 272.03 169.14 272.03 142.93"
+                    />
+                    <polyline
+                      className="cls-4"
+                      points="142.58 142.93 142.58 169.14 172.96 169.14 172.96 137.49 188.89 137.49"
+                    />
+                  </g>
+                </g>
+              </svg>
             </div>
           </div>
         </Container>
