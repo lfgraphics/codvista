@@ -53,6 +53,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -91,4 +92,62 @@ body {
   grid-gap: 1.5rem 1.5625rem;
   grid-template-columns: 18.8125rem 15.4375rem 4.5625rem 12.3125rem 12.3125rem;
 }
+
 /* bento grid styling end */
+
+/* hero svg styling */
+.cls-1,
+.cls-3 {
+  fill: #fff;
+}
+
+.cls-2,
+.cls-4 {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
+
+
+.cls-2 {
+  stroke-width: 0.75px;
+}
+
+.cls-3 {
+  font-size: 7.25px;
+  /* font-family: MyriadPro-Regular, Myriad Pro; */
+}
+
+.cls-4 {
+  stroke-width: 0.5px;
+}
+
+/* svg animations */
+
+.cls-4 {
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1000;
+  /* Set a large value for the dash array */
+  stroke-dashoffset: 1000;
+  /* Start with dash offset equal to dash array length */
+  animation: dash 4s ease forwards infinite, glow 4s ease-in-out forwards infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke: #18111c;
+    /* Initial color */
+  }
+
+  100% {
+    stroke: #fff;
+    /* Final color */
+    /* stroke-dashoffset: 0; */
+  }
+}
+
+@keyframes glow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
