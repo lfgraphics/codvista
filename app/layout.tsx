@@ -3,7 +3,7 @@ import { Kanit } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 
 const inter = Kanit({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
