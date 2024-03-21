@@ -3,6 +3,7 @@ import { Kanit } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/footer";
 
 const inter = Kanit({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -28,6 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-HJRCZ2SWZP"
@@ -61,6 +69,7 @@ export default function RootLayout({
           <Header />
         </div>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );

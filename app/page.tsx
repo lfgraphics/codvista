@@ -631,13 +631,12 @@ export default function App() {
                         alt={""}
                         width={400}
                         height={350}
-                      ></Image>
+                      />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </main>
         {/* Faqs */}
