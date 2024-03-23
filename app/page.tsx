@@ -1,7 +1,6 @@
 "use client";
 import ActionButton from "@/components/ui/actionButton";
 import Container from "@/components/ui/container";
-import Spline from "@splinetool/react-spline";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -82,12 +81,12 @@ export default function App() {
   return (
     <>
       {/* Hero Section */}
-      <div className="mt-14 relative w-full text-white overflow-hidden z-40">
+      <div className="mt-14 w-full text-white overflow-hidden">
         <Container>
           <div className="flex flex-col md:flex-row w-full gap-4 items-center justify-center">
             {/* hero text and CTA*/}
-            <div className="max-w-lg  py-16 sm:left-9 z-20  sm:ml-11">
-              - This site is under development
+            <div className="max-w-lg  py-16 sm:left-9 z-20 sm:ml-11">
+              - This website is under development
               <h1 className="text-5xl mb-4" style={{ fontWeight: "600" }}>
                 Unlock Digital Success with Cod Vista!
               </h1>
