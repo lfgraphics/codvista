@@ -1,6 +1,15 @@
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import Star from "@/components/ui/star";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Eye, Gem, Target } from "lucide-react";
 
 const page = () => {
   return (
@@ -12,12 +21,12 @@ const page = () => {
         <div className="flex relative flex-col md:flex-row items-center gap-8">
           <div className="absolute md:-top-4 md:-left-4 -top-4 -left-0 w-7 h-auto">
             <div className="scale-150">
-              <Star color="fill-purple-600"></Star>
+              <Star color="fill-purple-600 z-500"></Star>
             </div>
           </div>
-          <div className="image rounded-lg overflow-hidden md:w-[45%]">
+          <div className="image rounded-lg overflow-hidden md:w-[45%] max-h-[75vh] ">
             <Image
-              className="w-full"
+              className="w-full sm:-translate-y-20 z-400"
               src={"/about/first.jpeg"}
               alt="Cod Vista Team"
               width={300}
@@ -38,67 +47,120 @@ const page = () => {
           <h1 className="text-center md:text-6xl font-bold text-4xl my-7">
             Our Mission and vision
           </h1>
-          <div className="mission-vision-values">
-            <h3 className="font-semibold text-left text-2xl my-7 md:text-4xl">
-              Mission
-            </h3>
-            <p className="text-lg md:text-xl ">
-              We build-design alongside our clients to make the world a better
-              place for everyone.
-            </p>
-            <h3 className="font-semibold text-left text-2xl my-7 md:text-4xl">
-              Vision
-            </h3>
-            <p className="text-lg md:text-xl ">
-              Our company’s vision is fully defined by a simple but
-              comprehensive phrase — We will revolutionize the digital
-              landscape.
-            </p>
-            <h3 className="font-semibold text-left text-2xl my-7 md:text-4xl">
-              Values
-            </h3>
-            <p className="text-lg md:text-xl ">
-              We do what we love and we do it well.
-              <br />
-              We take pride in our team and continuously evolving nature.
-              <br />
-              We uphold honesty as the bedrock of our agency, fostering
-              transparency and trust in all our interactions.
-            </p>
+          <div className="mission-vision-values justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="bg-transparent text-gray-200 transition-all ease-in-out hover:scale-105  hover:bg-gray-200 hover:text-black">
+              <CardHeader>
+                <CardTitle>
+                  <Target className="scale-150" />
+                  <h3 className="font-semibold text-left text-2xl mt-4 md:text-4xl">
+                    Mission
+                  </h3>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg md:text-xl ">
+                  We build-design alongside our clients to make the world a
+                  better place for everyone.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-transparent text-gray-200 transition-all ease-in-out hover:scale-105  hover:bg-gray-200 hover:text-black">
+              <CardHeader>
+                <CardTitle>
+                  <Eye className="scale-150" />
+                  <h3 className="font-semibold text-left text-2xl mt-4 md:text-4xl">
+                    Vision
+                  </h3>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg md:text-xl ">
+                  Our company’s vision is fully defined by a simple but
+                  comprehensive phrase — We will revolutionize the digital
+                  landscape.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-transparent text-gray-200 transition-all ease-in-out hover:scale-105  hover:bg-gray-200 hover:text-black">
+              <CardHeader>
+                <CardTitle>
+                  <Gem className="scale-150" />
+                  <h3 className="font-semibold text-left text-2xl mt-4 md:text-4xl">
+                    Values
+                  </h3>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg md:text-xl ">
+                  We do what we love and we do it well.
+                  <br />
+                  We take pride in our team and continuously evolving nature.
+                  <br />
+                  We uphold honesty as the bedrock of our agency, fostering
+                  transparency and trust in all our interactions.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
         <div className="why-us?">
           <h1 className="text-center md:text-6xl font-bold text-4xl my-7">
             Why Chose Us?
           </h1>
-          <div className="mission-vision-values">
-            <h3 className="font-semibold text-left text-2xl my-7 md:text-4xl">
-              Result-oriented
-            </h3>
-            <p className="text-lg md:text-xl ">
-              For Cod Vista, project success hinges solely on achieving clients'
-              set goals and objectives. With exceptional project management and
-              a talented IT team, we expedite tasks with efficiency and
-              precision, ensuring high-quality and superior outcomes every time.
-            </p>
-            <h3 className="font-semibold text-left text-2xl my-7 md:text-4xl">
-              Flexible
-            </h3>
-            <p className="text-lg md:text-xl ">
-              With a cadre of highly skilled IT professionals alreadyboard, our
-              team swiftly adjusts to meet clients' requirements. We excel in
-              rapid team ramp-up, effortlessly scaling our workforce up or down
-              to match evolving project conditions.
-            </p>
-            <h3 className="font-semibold text-left text-2xl my-7 md:text-4xl">
-              Transparent
-            </h3>
-            <p className="text-lg md:text-xl ">
-              Our cooperation with clients is always open and honest. We ensure
-              regular communication, an established daily reporting system, and
-              tracking tools according to the client’s preferences. Thus, our
-              clients can control all possible aspects of projects.
-            </p>
+          <div className="mission-vision-values justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="bg-transparent text-gray-200 transition-all ease-in-out hover:scale-105  hover:bg-gray-200 hover:text-black">
+              <CardHeader>
+                <CardTitle>
+                  <h3 className="font-semibold text-left text-2xl my-7 md:text-4xl">
+                    Result-oriented
+                  </h3>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg md:text-xl ">
+                  For Cod Vista, project success hinges solely on achieving
+                  clients' set goals and objectives. With exceptional project
+                  management and a talented IT team, we expedite tasks with
+                  efficiency and precision, ensuring high-quality and superior
+                  outcomes every time.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-transparent text-gray-200 transition-all ease-in-out hover:scale-105  hover:bg-gray-200 hover:text-black">
+              <CardHeader>
+                <CardTitle>
+                  <h3 className="font-semibold text-left text-2xl my-7 md:text-4xl">
+                    Flexible
+                  </h3>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg md:text-xl ">
+                  With a cadre of highly skilled IT professionals alreadyboard,
+                  our team swiftly adjusts to meet clients' requirements. We
+                  excel in rapid team ramp-up, effortlessly scaling our
+                  workforce up or down to match evolving project conditions.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="bg-transparent text-gray-200 transition-all ease-in-out hover:scale-105  hover:bg-gray-200 hover:text-black">
+              <CardHeader>
+                <CardTitle>
+                  <h3 className="font-semibold text-left text-2xl my-7 md:text-4xl">
+                    Transparent
+                  </h3>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg md:text-xl ">
+                  Our cooperation with clients is always open and honest. We
+                  ensure regular communication, an established daily reporting
+                  system, and tracking tools according to the client’s
+                  preferences. Thus, our clients can control all possible
+                  aspects of projects.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
         <div className="TEAMS">
