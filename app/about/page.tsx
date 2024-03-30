@@ -25,7 +25,7 @@ const page = () => {
             />
           </div>
           <div className="text flex-[55%] justify-center relative">
-            <p className="text-xl text-left md:leading-10">
+            <p className="text-xl text-left md:leading-10 md:mb-32">
               Cod Vista is a full-service digital transformation partner founded
               in 2020. Our company serves IT and non IT entities, helping to
               achieve a variety of goals and objectives with digital solutions
