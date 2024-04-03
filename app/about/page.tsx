@@ -4,8 +4,6 @@ import Star from "@/components/ui/star";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
