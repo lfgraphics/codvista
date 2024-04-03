@@ -147,7 +147,7 @@ export default function App() {
                       width="37.03"
                       height="37.03"
                     />
-                    <a
+                    <Link
                       href="/services/web-app-development"
                       className="cursor-pointer"
                     >
@@ -164,7 +164,7 @@ export default function App() {
                       >
                         Development
                       </text>
-                    </a>
+                    </Link>
                     <rect
                       className="cls-2"
                       x="259.92"
@@ -172,14 +172,14 @@ export default function App() {
                       width="56.65"
                       height="13.27"
                     />
-                    <a href="/services/digital-marketing">
+                    <Link href="/services/digital-marketing">
                       <text
                         className="cls-3"
                         transform="translate(262.07 138.43)"
                       >
                         Digital Marketing
                       </text>
-                    </a>
+                    </Link>
                     <rect
                       className="cls-2"
                       x="98.18"
@@ -187,14 +187,14 @@ export default function App() {
                       width="56.65"
                       height="13.27"
                     />
-                    <a href="/services/graphic-design">
+                    <Link href="/services/graphic-design">
                       <text
                         className="cls-3"
                         transform="translate(103.39 138.43)"
                       >
                         Graphic Design
                       </text>
-                    </a>
+                    </Link>
                     <rect
                       className="cls-2"
                       x="179.05"
@@ -202,14 +202,14 @@ export default function App() {
                       width="56.65"
                       height="13.27"
                     />
-                    <a href="/services/cybersecurity">
+                    <Link href="/services/cybersecurity">
                       <text
                         className="cls-3"
                         transform="translate(186.71 181.87)"
                       >
                         Cybersecurity
                       </text>
-                    </a>
+                    </Link>
                     <text className="cls-3" transform="translate(78.46 74.3)">
                       Branding
                     </text>
