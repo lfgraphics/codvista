@@ -47,6 +47,87 @@ const page = () => {
             {/* <div className="blanky hidden md:block bg-white w-[50%] absolute bottom-5 left-10 h-[10px]"></div> */}
           </div>
         </div>
+        <div className="my-6 min-h-[75svh] flex items-center">
+          <div>
+            <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
+              Branding/Rebranding
+            </h4>
+            <div className="service-div even flex flex-col justify-center items-center md:items-center md:flex-row gap-4">
+              <div className="left text md:max-w-[50%]">
+                <p className="text-left">
+                  We specialize in crafting unique brand identities that
+                  resonate with your target audience. Whether you're
+                  establishing a new brand or revitalizing an existing one, our
+                  team brings creativity and strategic thinking to every
+                  project, ensuring your brand stands out in today's competitive
+                  market.
+                </p>
+              </div>
+              <div className="right w-[90%] overflow-hidden rounded-xl max-h-[400px] flex items-center">
+                <Image
+                  className="w-full"
+                  src={"/services/gfx/b-id.jpeg"}
+                  alt={""}
+                  width={400}
+                  height={350}
+                ></Image>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="my-6 min-h-[75svh] flex items-center">
+          <div>
+            <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
+              Print Graphics
+            </h4>
+            <div className="service-div odd flex flex-col justify-center items-center md:items-center md:flex-row-reverse gap-4">
+              <div className="left-text md:max-w-[50%]">
+                <p className="text-left">
+                  From eye-catching posters and banners to informative brochures
+                  and sleek business cards, print designs that capture attention
+                  and communicate your message effectively. Printed with the
+                  highest quality standards, leaving a lasting impression on
+                  your audience.
+                </p>
+              </div>
+              <div className="right w-[90%] overflow-hidden rounded-xl flex items-center">
+                <Image
+                  className="w-full"
+                  src={"/services/gfx/print.jpeg"}
+                  alt={""}
+                  width={400}
+                  height={350}
+                ></Image>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="my-6 min-h-[75svh] flex items-center">
+          <div>
+            <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
+              Digital Graphics
+            </h4>
+            <div className="service-div even flex flex-col justify-center items-center md:items-center md:flex-row gap-4">
+              <div className="left text md:max-w-[50%]">
+                <p className="text-left">
+                  Whether it's designing a memorable logo that embodies your
+                  brand's essence or creating engaging social media kits and
+                  icons, our team combines expertise and creativity to help your
+                  brand stand out in the digital realm.
+                </p>
+              </div>
+              <div className="right w-[90%] overflow-hidden rounded-xl max-h-[400px] flex items-center">
+                <Image
+                  className="w-full"
+                  src={"/services/gfx/digital.jpeg"}
+                  alt={""}
+                  width={400}
+                  height={350}
+                ></Image>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </Container>
   );
