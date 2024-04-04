@@ -3,15 +3,7 @@ import ActionButton from "@/components/ui/actionButton";
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ChevronsRight,
-  Code2,
-  LineChart,
-  ShieldCheck,
-  Star,
-  Terminal,
-  Wand2,
-} from "lucide-react";
+import { Code2, LineChart, ShieldCheck, Wand2 } from "lucide-react";
 import RedirectButton from "@/components/ui/redirectButton";
 import FAQs from "@/components/Faqs";
 
