@@ -1,9 +1,14 @@
-// import Image from "next/image";
-import Container from "@/components/ui/container";
+"use client";
 
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
+  let [insideBrowser, setInsideBrowser] = useState(false);
+  useEffect(() => {
+    setInsideBrowser(true);
+  });
   return (
     <footer className="relative w-full flex justify-center mt-5">
       <div className="glowbox absolute -z-10 w-[80%] h-[100px] -top-12 blur-3xl bg-purple-600"></div>
@@ -77,14 +82,23 @@ const Footer = () => {
           <h3 className="text-lg font-bold">Quick Links</h3>
           <ul className="mt-3">
             <li>
-              <a href="/about" className="hover:text-blue-700">
+              <Link href="/about" className="hover:text-blue-700">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/services" className="hover:text-blue-700">
-                Our Services
-              </a>
+              {insideBrowser && (
+                <Link
+                  href={
+                    !window.location.href.includes("/")
+                      ? "#servicesDivs"
+                      : "/#servicesDivs"
+                  }
+                  className="hover:text-blue-700"
+                >
+                  Our Services
+                </Link>
+              )}
             </li>
           </ul>
           <div className="mt-3 border-t border-t-gray-500 mr-6">

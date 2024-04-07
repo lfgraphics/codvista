@@ -59,6 +59,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #18111c;
   color: #dadada;

@@ -1,12 +1,7 @@
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import Star from "@/components/ui/star";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, Gem, Target } from "lucide-react";
 
 const page = () => {
@@ -18,11 +13,11 @@ const page = () => {
         </h1>
         <div className="flex relative flex-col md:flex-row items-center gap-8">
           <div className="absolute md:-top-4 md:-left-4 -top-4 -left-0 w-7 h-auto">
-            <div className="scale-150">
-              <Star color="fill-purple-600 z-500"></Star>
+            <div className="scale-150 z-10">
+              <Star color="fill-purple-600"></Star>
             </div>
           </div>
-          <div className="image rounded-lg overflow-hidden md:w-[45%] max-h-[75vh] ">
+          <div className="image rounded-lg overflow-hidden md:w-[45%] max-h-[75vh] z-0">
             <Image
               className="w-full sm:-translate-y-20 z-400"
               src={"/about/first.jpeg"}
@@ -180,14 +175,7 @@ const page = () => {
               online world while Taha's creativity and innovative thinking laid
               the foundation of our digital solutions, allowing us to craft
               visually stunning designs-integrate them seamlessly.
-              <br />
-              <br />
-              To encapsulate our clients of the marketing world we invited Mohd
-              Amir, our digital marketing virtuoso having over three years of
-              experience. With a knack for growing social media presence and
-              managing ad campaigns, Amir elevated Cod Vista's offerings to new
-              heights, ensuring clients received comprehensive services as per
-              their needs.
+              
               <br />
               <br />
               Every team needs balance, and that's where Yusuf Khan, another
@@ -200,7 +188,7 @@ const page = () => {
               <br />
               On top of that, to ensure that every aspect of your project
               receives the attention and expertise it deserves, we utilize
-              <strong className="text-2xl">Strategic Outsourcing</strong> as it
+              <strong className="text-2xl"> Strategic Outsourcing</strong> as it
               enables us to tap into a vast network of specialized talent and
               resources. By collaborating with trusted partners, we remain
               responsive to the evolving needs of our clients while maintaining

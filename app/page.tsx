@@ -427,7 +427,7 @@ export default function App() {
             <div className="review my-4"></div>
 
             <h2 className="text-3xl font-bold my-4">Services we offer</h2>
-            <div className="servicesDivs">
+            <div className="servicesDivs" id="servicesDivs">
               <div className="digital-marketing my-6 min-h-[75svh] flex items-center">
                 <div>
                   <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
