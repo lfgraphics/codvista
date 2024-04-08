@@ -91,57 +91,11 @@ const page = () => {
   return (
     <Container>
       <div className="mt-14 md:mt-32 mb-7">
-        <h1 className="text-center text-white z-40 md:left-[35%] md:text-6xl font-bold text-4xl my-7">
+        <h1 className="text-center text-white z-40 md:left-[35%] md:text-6xl font-bold text-4xl">
           Cyber Security
         </h1>
-        <div className="flex relative flex-col md:flex-row items-center gap-8">
-          <div className="absolute md:-top-4 md:-left-4 -top-4 -left-0 w-7 h-auto">
-            <div className="scale-150">
-              {/* <Star color="fill-purple-600 z-500"></Star> */}
-            </div>
-          </div>
-          <div className="image rounded-lg overflow-hidden md:w-[45%] ">
-            <Image
-              className="w-full z-400"
-              src={"/home-page/security.jpg"}
-              alt="Cod Vista Team"
-              width={300}
-              height={450}
-            />
-          </div>
-          <div className="text flex-[55%] justify-center relative">
-            <p className="text-xl text-left">
-              <strong>Dangers lie behind every click,</strong> Cod Vista stands
-              as your unyielding shield. We're not just about cybersecurity;
-              we're about creating a fortress around your digital empire,
-              ensuring every byte of your data is locked down tighter than Fort
-              Knox.
-              <br />
-              <br />
-              Our team is a blend of seasoned warriors in the cybersecurity
-              realm, armed to the teeth with the latest tech and strategies to
-              keep your digital domain safe and sound. Our Arsenal Includes-
-              Cutting-edge cloud, application, and network security,
-              impenetrable ransomware defense, foolproof authentication, and an
-              ironclad data security strategy designed to keep the bad guys out
-              and your peace of mind intact, preventing data leaks, threats,
-              financial, reputational, and operational losses.
-              <br />
-              <br />
-              Moreover, our comprehensive offerings encompass audits,
-              penetration testing, and the implementation of advanced
-              cybersecurity measures.
-              <br />
-              <br />
-              With us in your corner, you can focus on what you do best—while we
-              keep the digital barbarians at the gates.
-              <br />
-              <ActionButton text="Book a Call" />
-            </p>
-            {/* <div className="blanky hidden md:block bg-white w-[50%] absolute bottom-5 left-10 h-[10px]"></div> */}
-          </div>
-        </div>
-        <div className="my-6 min-h-[75svh] flex items-center">
+        <div className="saparator"></div>
+        <div className="my-6 flex items-center">
           <div>
             <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
               What are Web Application Testing Services?
@@ -176,7 +130,8 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="my-6 min-h-[75svh]">
+        <div className="secsaparator"></div>
+        <div className="my-6">
           <div>
             <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
               Security testing for web applications is the analysis of these
@@ -255,7 +210,8 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="my-6 min-h-[75svh]">
+        <div className="secsaparator"></div>
+        <div className="my-6">
           <div>
             <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
               Comprehensive Web App Testing Services by COD Vista
@@ -349,6 +305,7 @@ const page = () => {
             </div>
           </div>
         </div>
+        <div className="secsaparator"></div>
         <div className="my-6">
           <div>
             <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
@@ -377,6 +334,7 @@ const page = () => {
             </div>
           </div>
         </div>
+        <div className="secsaparator"></div>
         <div className="my-6">
           <div>
             <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
@@ -422,6 +380,7 @@ const page = () => {
             </div>
           </div>
         </div>
+        <div className="secsaparator"></div>
         <div className="my-6">
           <div>
             <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
@@ -485,6 +444,7 @@ const page = () => {
             </div>
           </div>
         </div>
+        <div className="secsaparator"></div>
         <div className="my-6">
           <div>
             <h4 className="text-left text-2xl font-bold mb-4 inline-flex md:flex md:justify-start">
@@ -511,8 +471,16 @@ const page = () => {
             </div>
           </div>
         </div>
+        <div className="secsaparator"></div>
       </div>
       <FAQs faqs={faqs} />
+      <div className="mb-8 text-lg">
+        <p>
+          With our comprehensive services and rigorous testing methodologies, we
+          ensure the security and reliability of your web applications.
+        </p>
+        <ActionButton text="Book a Call" />
+      </div>
     </Container>
   );
 };
