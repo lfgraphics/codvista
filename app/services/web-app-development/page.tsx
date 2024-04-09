@@ -1,11 +1,13 @@
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import ActionButton from "@/components/ui/actionButton";
+import Link from "next/link";
 
 const page = () => {
   return (
     <Container>
-      <div className="mt-14 md:mt-32 mb-7">
+      <div className="mt-14 md:mt-32 mb-7 relative">
+        <div className="sticky top-20 right-5 z-50 "><Link className="p-3 rounded-lg bg-purple-800 font-semibold" href="/services/web-app-development/caseStudies">Case Studies</Link></div>
         <h1 className="text-center text-white z-40 md:left-[35%] md:text-6xl font-bold text-4xl my-7">
           Web & App Development
         </h1>

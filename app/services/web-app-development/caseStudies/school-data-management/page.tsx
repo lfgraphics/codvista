@@ -30,10 +30,10 @@ const page = () => {
           </p>
           <h5 className="text-left text-2xl font-semibold mt-6">Solution:</h5>
           <p>
-            The Cod Vista's development team analyzed the school's Excel workbook and
-            identified opportunities to enhance efficiency without the need for
-            expensive software or database systems. The following steps were
-            taken to address the school's requirements:
+            The Cod Vista's development team analyzed the school's Excel
+            workbook and identified opportunities to enhance efficiency without
+            the need for expensive software or database systems. The following
+            steps were taken to address the school's requirements:
           </p>
           <ol className="list-decimal ml-6">
             <li>
@@ -101,7 +101,8 @@ const page = () => {
           </p>
         </div>
         <div className="clientReview">
-            
+          <h5 className="text-left text-2xl font-semibold mt-6">Client Review/ Testimonial:</h5>
+          waitng for client response
         </div>
         <div className="secsaparator"></div>
       </div>
