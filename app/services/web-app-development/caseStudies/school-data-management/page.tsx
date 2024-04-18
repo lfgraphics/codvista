@@ -1,4 +1,15 @@
 import Container from "@/components/ui/container";
+export const metadata = {
+  title: "Cod Vista | Development Case Studies | School Data Management",
+  description: "Modern Nursery School faced challenges in efficiently managing student fee records due to manual processes and inaccuracies in their Excel workbook. With a limited budget and time constraints, the school sought a cost-effective solution to automate fee management and streamline record-keeping.",
+  metadataBase: new URL(
+    "https://www.codvista.com/services/web-app-development/caseStudies/school-data-management"
+  ),
+  openGraph: {
+    images: ["https://www.codvista.com/logo.png"],
+  },
+};
+
 
 const page = () => {
   return (

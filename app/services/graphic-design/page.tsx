@@ -1,5 +1,16 @@
 import Container from "@/components/ui/container";
 import Image from "next/image";
+export const metadata = {
+  title: "Cod Vista | GRaphic Design",
+  description: "Get all your graphic design needs met—from branding to website illustrations. We are committed to creating designs that not only catch the eye but also tell your unique story, thereby forging deeper connections with your audience on a whole new level.",
+  metadataBase: new URL(
+    "https://www.codvista.com/services/graphic-design"
+  ),
+  openGraph: {
+    images: ["https://www.codvista.com/logo.png"],
+  },
+};
+
 
 const page = () => {
   return (

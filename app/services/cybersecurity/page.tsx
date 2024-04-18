@@ -3,6 +3,16 @@ import Image from "next/image";
 import ActionButton from "@/components/ui/actionButton";
 import FAQs from "@/components/Faqs";
 
+export const metadata = {
+  title: "Cod Vista | Cybersecurity",
+  description:
+    "Dangers lie behind every click, Cod Vista stands as your unyielding shield. We're not just about cybersecurity; we're about creating a fortress around your digital empire, ensuring every byte of your data is locked down tighter than Fort Knox.",
+  metadataBase: new URL("https://www.codvista.com/services/cybersecurity"),
+  openGraph: {
+    images: ["https://www.codvista.com/logo.png"],
+  },
+};
+
 interface FAQItem {
   question: string;
   answer: string;

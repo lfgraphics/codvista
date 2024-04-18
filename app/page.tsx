@@ -1,12 +1,20 @@
-"use client";
 import ActionButton from "@/components/ui/actionButton";
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import Link from "next/link";
-import { Code2, LineChart, ShieldCheck, Target, Wand2 } from "lucide-react";
+import { Code2, LineChart, ShieldCheck, Wand2 } from "lucide-react";
 import RedirectButton from "@/components/ui/redirectButton";
 import FAQs from "@/components/Faqs";
 import Marquee from "react-fast-marquee";
+
+export const metadata = {
+  title: "Cod Vista",
+  description: "A full-services digital transformation partner",
+  metadataBase: new URL("https://www.codvista.com"),
+  openGraph: {
+    images: ["https://www.codvista.com/logo.png"],
+  },
+};
 
 interface FAQItem {
   question: string;
@@ -81,6 +89,11 @@ const images: Images[] = [
     src: "/home-page/marquee/jahannuma.png",
     url: "https://jahan-numa.org",
     name: "Jahan Numa",
+  },
+  {
+    src: "/home-page/marquee/asklive.jpg",
+    url: "https://www.instagram.com/_asklive/",
+    name: "ASK Live",
   },
   {
     src: "/home-page/marquee/kmwf.png",

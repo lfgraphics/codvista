@@ -12,15 +12,6 @@ const inter = Kanit({
   preload: true,
 });
 
-export const metadata: Metadata = {
-  title: "Cod Vista",
-  description: "A full-services digital transformation partner",
-  openGraph: {
-    images: ["https://www.codvista.com/logo.png"],
-  },
-  metadataBase: new URL("https://www.codvista.com"),
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{

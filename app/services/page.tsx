@@ -3,6 +3,16 @@ import Image from "next/image";
 import { Code2, LineChart, ShieldCheck, Wand2 } from "lucide-react";
 import RedirectButton from "@/components/ui/redirectButton";
 
+export const metadata = {
+  title: "Cod Vista | Services",
+  description:
+    "With our personalized approach and commitment to excellence, we'll help you reach new heights in your digital marketing endeavors",
+  metadataBase: new URL("https://www.codvista.com/services"),
+  openGraph: {
+    images: ["https://www.codvista.com/logo.png"],
+  },
+};
+
 const page = () => {
   return (
     <Container>

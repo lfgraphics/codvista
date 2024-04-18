@@ -2,6 +2,17 @@ import Container from "@/components/ui/container";
 import Image from "next/image";
 import ActionButton from "@/components/ui/actionButton";
 import Link from "next/link";
+export const metadata = {
+  title: "Cod Vista | Development",
+  description: "From concept to application, we specialize in creating custom web and app solutions that captivate your audience and leave a lasting impression. Through expert guidance, quality-assured solutions, and a personalized approach, we aim to streamline all your digital solutions, sparing you the hassle.",
+  metadataBase: new URL(
+    "https://www.codvista.com/services/web-app-development"
+  ),
+  openGraph: {
+    images: ["https://www.codvista.com/logo.png"],
+  },
+};
+
 
 const page = () => {
   return (

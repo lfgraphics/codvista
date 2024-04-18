@@ -1,6 +1,17 @@
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import Link from "next/link";
+export const metadata = {
+  title: "Cod Vista | Development Case Studies",
+  description: "Cod Vista's Development Team Services Case Studies",
+  metadataBase: new URL(
+    "https://www.codvista.com/services/development/caseStudies"
+  ),
+  openGraph: {
+    images: ["https://www.codvista.com/logo.png"],
+  },
+};
+
 
 const page = () => {
   return (

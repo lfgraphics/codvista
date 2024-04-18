@@ -2,6 +2,17 @@ import Container from "@/components/ui/container";
 import Image from "next/image";
 import ActionButton from "@/components/ui/actionButton";
 
+export const metadata = {
+  title: "Cod Vista | Digital Marketing",
+  description: " With our personalized approach and commitment to excellence, we'll help you reach new heights in your digital marketing endeavors",
+  metadataBase: new URL(
+    "https://www.codvista.com/services/digital-marketing"
+  ),
+  openGraph: {
+    images: ["https://www.codvista.com/logo.png"],
+  },
+};
+
 const page = () => {
   return (
     <Container>

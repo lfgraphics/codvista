@@ -1,6 +1,14 @@
-import Container from "@/components/ui/container";
 import Script from "next/script";
 import React from "react";
+
+export const metadata = {
+  title: "Cod Vista | Contact",
+  description: "A full-services digital transformation partner",
+  metadataBase: new URL("https://www.codvista.com/contact"),
+  openGraph: {
+    images: ["https://www.codvista.com/logo.png"],
+  },
+};
 
 const page = () => {
   return (

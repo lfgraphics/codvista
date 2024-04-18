@@ -4,6 +4,15 @@ import Star from "@/components/ui/star";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, Gem, Target } from "lucide-react";
 
+export const metadata = {
+  title: "Cod Vista | About",
+  description: "A full-services digital transformation partner",
+  metadataBase: new URL("https://www.codvista.com/about"),
+  openGraph: {
+    images: ["https://www.codvista.com/logo.png"],
+  },
+};
+
 const page = () => {
   return (
     <Container>
