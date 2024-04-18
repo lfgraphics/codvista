@@ -3,13 +3,20 @@ import ActionButton from "@/components/ui/actionButton";
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import Link from "next/link";
-import { Code2, LineChart, ShieldCheck, Wand2 } from "lucide-react";
+import { Code2, LineChart, ShieldCheck, Target, Wand2 } from "lucide-react";
 import RedirectButton from "@/components/ui/redirectButton";
 import FAQs from "@/components/Faqs";
+import Marquee from "react-fast-marquee";
 
 interface FAQItem {
   question: string;
   answer: string;
+}
+
+interface Images {
+  src: string;
+  url: string | null;
+  name: string;
 }
 
 const faqs: FAQItem[] = [
@@ -66,6 +73,54 @@ const faqs: FAQItem[] = [
   {
     question: "What is Cod Vista's approach to client collaboration?",
     answer: `We keep communication open and make sure everyone is on the same page. We believe in building strong partnerships with our clients, actively involving them in decision-making, providing regular updates and feedback. Our goal is to make our clients feel like they're part of the team, and together, we can make great things happen.`,
+  },
+];
+
+const images: Images[] = [
+  {
+    src: "/home-page/marquee/jahannuma.png",
+    url: "https://jahan-numa.org",
+    name: "Jahan Numa",
+  },
+  {
+    src: "/home-page/marquee/kmwf.png",
+    url: "http://kmwf.in",
+    name: "Khadim-e-Millat Welfare Foundation",
+  },
+  {
+    src: "/home-page/marquee/hqmeds.jpg",
+    url: "https://www.hqmedsindia.com/",
+    name: "HQ Meds",
+  },
+  {
+    src: "/home-page/marquee/mankindmedicare.jpg",
+    url: "https://www.mankindmedicare.com",
+    name: "ManKind Medicare",
+  },
+  {
+    src: "/home-page/marquee/alibaba.png",
+    url: "https://alibaba.com",
+    name: "Ali Baba",
+  },
+  {
+    src: "/home-page/marquee/facebook.png",
+    url: "https://facebook.com",
+    name: "Facebook",
+  },
+  {
+    src: "/home-page/marquee/fareye.webp",
+    url: "https://fareye.com",
+    name: "Far Eye",
+  },
+  {
+    src: "/home-page/marquee/kaartech.webp",
+    url: "https://www.kaartech.com/",
+    name: "Kaar Tech",
+  },
+  {
+    src: "/home-page/marquee/meta.png",
+    url: "https://www.meta.com",
+    name: "Meta",
   },
 ];
 
@@ -418,9 +473,44 @@ export default function App() {
                 Leading companies trust us to design their products
               </h3>
               <div className="my-4">
-                <marquee behavior="scroll" direction="left">
-                  Images of companies we've worked with (will add shortly)
-                </marquee>
+                <Marquee
+                  autoFill={true}
+                  pauseOnHover={true}
+                  direction="left"
+                  delay={0}
+                  gradient={false}
+                >
+                  <div className="first flex gap-4 ml-4 py-5">
+                    {images.map((obj) => (
+                      <>
+                        {/* <span className="absolute -top-8 z-50 bg-white w-32 text-black text-center px-2 rounded-lg">
+                          {obj.name}
+                        </span> */}
+                        <div className="relative text-center bg-white w-20 h-20 rounded-xl cursor-pointer overflow-hidden filter grayscale hover:scale-125 hover:filter-none transition-all ease-in-out">
+                          {obj.url ? (
+                            <Link href={`${obj.url}`} target="_blank">
+                              <Image
+                                className="w-full h-full"
+                                src={obj.src}
+                                alt={obj.name}
+                                width={1080}
+                                height={1080}
+                              />
+                            </Link>
+                          ) : (
+                            <Image
+                              className="w-full h-full"
+                              src={obj.src}
+                              alt={obj.name}
+                              width={1080}
+                              height={1080}
+                            />
+                          )}
+                        </div>
+                      </>
+                    ))}
+                  </div>
+                </Marquee>
               </div>
             </div>
 
@@ -468,9 +558,9 @@ export default function App() {
                         </span>
                       </p>
                     </div>
-                    <div className="right w-[90%] overflow-hidden rounded-xl max-h-[400px] flex items-center">
+                    <div className="right w-[90%] relative overflow-hidden rounded-xl max-h-[400px] flex items-center">
                       <Image
-                        className="w-full"
+                        className="w-full btn-4"
                         src={"/home-page/marketing.jpg"}
                         alt={""}
                         width={400}
