@@ -59,7 +59,9 @@ const TasbeehCounter = () => {
     <div
       className={`flex mx-auto flex-col items-center justify-between h-screen max-w-[450px] pt-28`}
     >
-      <div className={`pointer-events-none ${darkMode ? "dark-overlay" : ""}`}></div>
+      <div
+        className={`pointer-events-none ${darkMode ? "dark-overlay" : ""}`}
+      ></div>
       <div className="mb-8 text-3xl font-bold">Target: {target}</div>
 
       <div className="mt-8 flex flex-col justify-center items-center">
@@ -85,7 +87,9 @@ const TasbeehCounter = () => {
           onChange={(e) => handleChangeTarget(parseInt(e.target.value))}
         />
       </div>
-      <button onClick={() => setDarkMode(!darkMode)}>Toggle Dark Mode</button>
+      <button onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? "Turn the screen on" : "Turn the screen off"}
+      </button>
       <style jsx>{`
         .dark-overlay {
           background-color: rgba(0, 0, 0, 0.9);
