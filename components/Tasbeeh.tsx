@@ -37,20 +37,37 @@ useEffect(() => {
     localStorage.setItem("duwaen", JSON.stringify(duwaen));
   }
 }, [duwaen]);
-  
+
   const handleCount = () => {
     const newCount = count + 1;
     setCount(newCount);
-
     if (newCount === target) {
-      const audio = new Audio(audioPath);
-      audio.play();
-      setTimeout(() => {
-        audio.play();
-      }, 500);
-    }
-  };
-
+  if (navigator.vibrate) {
+    navigator.vibrate(300); // Vibrate for 500 milliseconds
+    const vibrateInterval = setInterval(() => {
+      // Check if the Vibration API is supported by the browser
+      navigator.vibrate(300); // Vibrate for 500 milliseconds
+    }, 800);
+    setTimeout(() => {
+      clearInterval(vibrateInterval); // Stop the interval after 1 second (2 repetitions)
+    }, 1000);
+  } else {
+    console.log("Vibration API is not supported");
+    // Fallback to other feedback mechanism if the Vibration API is not supported
+  }
+  const audio = new Audio(audioPath);
+  audio.play(); // Play the beep sound when target is reached
+  const intervalId = setInterval(() => {
+    audio.play(); // Play the beep sound again after 500 milliseconds
+  }, 300);
+  setTimeout(() => {
+    clearInterval(intervalId); // Stop the interval after 1 second (2 repetitions)
+  }, 1000);
+  setTimeout(() => {
+    setCount(0);
+  }, 1000);
+}};
+  
   const handleChangeTarget = (newTarget: number) => {
     setTarget(newTarget);
     setCount(0);
