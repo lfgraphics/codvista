@@ -49,8 +49,8 @@ const TasbeehCounter = () => {
   };
 
   const handleAddDua = () => {
-    const arabicDua = prompt("Enter Arabic Dua:");
-    const tarjuma = prompt("Enter Translation:");
+    const arabicDua = prompt("تسبیح عربی میں درج کریں");
+    const tarjuma = prompt("تسبیح کا ترجمہ درجھ کریں");
     if (arabicDua && tarjuma) {
       const newDuwaen = [...duwaen, { arabicDua, tarjuma }];
       setDuwaen(newDuwaen);
