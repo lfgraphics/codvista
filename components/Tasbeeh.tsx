@@ -1,87 +1,88 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { Check, Plus } from "lucide-react";
-const audioPath = "/beep.mp3";
 import "./css/tasbeeh.css";
+
+const audioPath = "/beep.mp3";
+
+interface Dua {
+  arabicDua: string;
+  tarjuma: string;
+}
 
 const TasbeehCounter = () => {
   const [target, setTarget] = useState(33);
   const [count, setCount] = useState(0);
   const [darkMode, setDarkMode] = useState(false);
+  const [duwaen, setDuwaen] = useState<Dua[]>(() => {
+    const savedDuwaen = localStorage.getItem("duwaen");
+    return savedDuwaen ? JSON.parse(savedDuwaen) : [];
+  });
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
-      if (!target.closest("#counter-button")) {
-        setDarkMode(false);
-      }
-    };
-
-    if (darkMode) {
-      document.addEventListener("click", handleClickOutside);
-    } else {
-      document.removeEventListener("click", handleClickOutside);
+    const savedDuwaen = localStorage.getItem("duwaen");
+    if (savedDuwaen) {
+      setDuwaen(JSON.parse(savedDuwaen));
     }
+  }, []);
 
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [darkMode]);
+  useEffect(() => {
+    localStorage.setItem("duwaen", JSON.stringify(duwaen));
+  }, [duwaen]);
 
   const handleCount = () => {
     const newCount = count + 1;
     setCount(newCount);
 
     if (newCount === target) {
-      if (navigator.vibrate) {
-        navigator.vibrate(300); // Vibrate for 500 milliseconds
-        const vibrateInterval = setInterval(() => {
-          // Check if the Vibration API is supported by the browser
-          navigator.vibrate(300); // Vibrate for 500 milliseconds
-        }, 800);
-        setTimeout(() => {
-          clearInterval(vibrateInterval); // Stop the interval after 1 second (2 repetitions)
-        }, 1000);
-      } else {
-        console.log("Vibration API is not supported");
-        // Fallback to other feedback mechanism if the Vibration API is not supported
-      }
       const audio = new Audio(audioPath);
-      audio.play(); // Play the beep sound when target is reached
-      const intervalId = setInterval(() => {
-        audio.play(); // Play the beep sound again after 500 milliseconds
-      }, 300);
+      audio.play();
       setTimeout(() => {
-        clearInterval(intervalId); // Stop the interval after 1 second (2 repetitions)
-      }, 1000);
-      setTimeout(() => {
-        setCount(0);
-      }, 1000);
+        audio.play();
+      }, 500);
     }
   };
 
   const handleChangeTarget = (newTarget: number) => {
     setTarget(newTarget);
-    setCount(0); // Reset count when target changes
+    setCount(0);
+  };
+
+  const handleAddDua = () => {
+    const arabicDua = prompt("Enter Arabic Dua:");
+    const tarjuma = prompt("Enter Translation:");
+    if (arabicDua && tarjuma) {
+      const newDuwaen = [...duwaen, { arabicDua, tarjuma }];
+      setDuwaen(newDuwaen);
+    }
   };
 
   return (
     <div
-      className={`flex relative mx-auto flex-col items-center h-screen max-w-[450px] pt-[70px]`}
+      className={`flex relative mx-auto flex-col items-center h-screen max-w-[450px] overflow-hidden pt-[70px]`}
     >
       <div
         className={`pointer-events-none ${darkMode ? "dark-overlay" : ""}`}
       ></div>
       <div className="mb-3 text-3xl font-bold">Target: {target}</div>
       <div className="head mb-3">ازکار و تسبیحات</div>
-      <div className="flex gap-4 flex-row max-w-full px-4 min-h-28 overflow-x-scroll">
-        <div className="min-w-80 min-h-16 rounded-lg border border-gray-600 flex items-center justify-center">
-          <div className="arabic"></div>
-          <div className="divider w-[90%] bg-gray-300 h-[2px]"></div>
-          <div className="tarjuma"></div>
-        </div>
+      <div
+        className="flex items-center gap-4 flex-row min-h-[215px] min-w-[95%] px-4 overflow-scroll"
+        dir="rtl"
+      >
+        {/* Render existing duaen */}
+        {duwaen.map((dua, index) => (
+          <div
+            key={index}
+            className="max-w-80 min-w-[85%] h-auto rounded-lg border border-gray-600 flex flex-col flex-nowrap items-center justify-center"
+          >
+            <div className="arabic text-right p-4">{dua.arabicDua}</div>
+            <div className="divider w-[90%] bg-gray-300 h-[2px]"></div>
+            <div className="tarjuma text-right p-4">{dua.tarjuma}</div>
+          </div>
+        ))}
         <div className="min-w-16 min-h-16 rounded-lg border border-gray-600 flex items-center justify-center">
-          <Plus size={40} strokeWidth={3} />
+          <Plus size={40} strokeWidth={3} onClick={handleAddDua} />
         </div>
       </div>
       <div className="mt-3 flex flex-col justify-center items-center">
@@ -110,7 +111,6 @@ const TasbeehCounter = () => {
       <button onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? "Turn the screen on" : "Turn the screen off"}
       </button>
-
       <div className="flex min-h-6 items-center mt-4 text-green-500">
         {count === target && (
           <>
