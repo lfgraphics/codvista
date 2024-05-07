@@ -80,16 +80,6 @@ const TasbeehCounter = () => {
           <div className="divider w-[90%] bg-gray-300 h-[2px]"></div>
           <div className="tarjuma"></div>
         </div>
-        <div className="min-w-80 min-h-16 rounded-lg border border-gray-600 flex items-center justify-center">
-          <div className="arabic"></div>
-          <div className="divider w-[90%] bg-gray-300 h-[2px]"></div>
-          <div className="tarjuma"></div>
-        </div>
-        <div className="min-w-80 min-h-16 rounded-lg border border-gray-600 flex items-center justify-center">
-          <div className="arabic"></div>
-          <div className="divider w-[90%] bg-gray-300 h-[2px]"></div>
-          <div className="tarjuma"></div>
-        </div>
         <div className="min-w-16 min-h-16 rounded-lg border border-gray-600 flex items-center justify-center">
           <Plus size={40} strokeWidth={3} />
         </div>
@@ -101,7 +91,7 @@ const TasbeehCounter = () => {
               key={value}
               className={`${
                 value === target ? "bg-blue-500 text-white" : "bg-gray-600"
-              } hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2`}
+              } active:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2`}
               onClick={() => handleChangeTarget(value)}
             >
               {value}
