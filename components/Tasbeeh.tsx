@@ -15,21 +15,29 @@ const TasbeehCounter = () => {
   const [count, setCount] = useState(0);
   const [darkMode, setDarkMode] = useState(false);
   const [duwaen, setDuwaen] = useState<Dua[]>(() => {
+  if (typeof window !== 'undefined') {
     const savedDuwaen = localStorage.getItem("duwaen");
     return savedDuwaen ? JSON.parse(savedDuwaen) : [];
-  });
+  } else {
+    return [];
+  }
+});
 
-  useEffect(() => {
+useEffect(() => {
+  if (typeof window !== 'undefined') {
     const savedDuwaen = localStorage.getItem("duwaen");
     if (savedDuwaen) {
       setDuwaen(JSON.parse(savedDuwaen));
     }
-  }, []);
+  }
+}, []);
 
-  useEffect(() => {
+useEffect(() => {
+  if (typeof window !== 'undefined') {
     localStorage.setItem("duwaen", JSON.stringify(duwaen));
-  }, [duwaen]);
-
+  }
+}, [duwaen]);
+  
   const handleCount = () => {
     const newCount = count + 1;
     setCount(newCount);
