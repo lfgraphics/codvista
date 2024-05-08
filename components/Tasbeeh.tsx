@@ -26,10 +26,7 @@ const CustomPrompt = ({
   };
 
   return (
-    <div
-      className="dark-overlay grid place-items-center"
-      onClick={handleSubmit}
-    >
+    <div className="dark-overlay grid place-items-center">
       <div className="modal max-w-[400px] flex flex-col gap-4 text-center">
         <input
           className="text-center bg-transparent placeholder:text-gray-300 border border-white rounded-md p-3"
@@ -69,7 +66,9 @@ const TasbeehCounter = () => {
   const [duwaen, setDuwaen] = useState<Dua[]>(() => {
     if (typeof window !== "undefined") {
       const savedDuwaen = localStorage.getItem("duwaen");
-      return savedDuwaen ? JSON.parse(savedDuwaen) : initialDuaen;
+      return savedDuwaen !== null && savedDuwaen !== "" && savedDuwaen !== "[]"
+        ? JSON.parse(savedDuwaen)
+        : initialDuaen;
     } else {
       return initialDuaen;
     }
@@ -140,7 +139,7 @@ const TasbeehCounter = () => {
 
   const handleDeleteDua = (index: number) => {
     // Create a copy of the duwaen array without the dua at the specified index
-    if (confirm("are you sure  to want to dlete this one?")) {
+    if (confirm("کیا آپ سچ میں یہ دعا ڈلیٹ کرنا چاہتے ہیں؟")) {
       const updatedDuwaen = [
         ...duwaen.slice(0, index),
         ...duwaen.slice(index + 1),
