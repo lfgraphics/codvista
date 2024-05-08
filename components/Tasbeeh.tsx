@@ -1,84 +1,152 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Check, Plus } from "lucide-react";
+import { Check, Plus, Trash2 } from "lucide-react";
 import "./css/tasbeeh.css";
+// import CustomPrompt from "./AzkarForm";
 
 const audioPath = "/beep.mp3";
 
-interface Dua {
+export interface Dua {
   arabicDua: string;
   tarjuma: string;
 }
+
+const CustomPrompt = ({
+  onSubmit,
+}: {
+  onSubmit: (arabicDua: string, tarjuma: string) => void;
+}) => {
+  const [arabicDua, setArabicDua] = useState("");
+  const [tarjuma, setTarjuma] = useState("");
+
+  const handleSubmit = () => {
+    onSubmit(arabicDua, tarjuma);
+    setArabicDua("");
+    setTarjuma("");
+  };
+
+  return (
+    <div
+      className="dark-overlay grid place-items-center"
+      onClick={handleSubmit}
+    >
+      <div className="modal max-w-[400px] flex flex-col gap-4 text-center">
+        <input
+          className="text-center bg-transparent placeholder:text-gray-300 border border-white rounded-md p-3"
+          type="text"
+          placeholder="تسبیح عربی میں درج کریں"
+          value={arabicDua}
+          onChange={(e) => setArabicDua(e.target.value)}
+        />
+        <input
+          className="text-center bg-transparent placeholder:text-gray-300 border border-white rounded-md p-3"
+          type="text"
+          placeholder="تسبیح کا ترجمہ درجھ کریں"
+          value={tarjuma}
+          onChange={(e) => setTarjuma(e.target.value)}
+        />
+        <button className="bg-blue-600 p-2 rounded-md" onClick={handleSubmit}>
+          Submit
+        </button>
+      </div>
+    </div>
+  );
+};
 
 const TasbeehCounter = () => {
   const [target, setTarget] = useState(33);
   const [count, setCount] = useState(0);
   const [darkMode, setDarkMode] = useState(false);
+  const [modleOpen, setModleOpen] = useState(false);
+  const initialDuaen: Dua[] = [
+    {
+      arabicDua:
+        "أَسْتَغْفِرُ اللَّهَ الَّذِي لاَ إِلَهَ إِلاَّ هُوَ الْحَىُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ",
+      tarjuma:
+        "میں اللہ سے اپنے گناہوں کی بخشش مانگتا ہوں، جس کے سوا کوئی عبادت کے لائق نہیں، جو زندہ اور ہمیشہ رہنے والا ہے اور میں اس کی طرف توبہ کرتا ہوں۔",
+    },
+  ];
   const [duwaen, setDuwaen] = useState<Dua[]>(() => {
-  if (typeof window !== 'undefined') {
-    const savedDuwaen = localStorage.getItem("duwaen");
-    return savedDuwaen ? JSON.parse(savedDuwaen) : [];
-  } else {
-    return [];
-  }
-});
-
-useEffect(() => {
-  if (typeof window !== 'undefined') {
-    const savedDuwaen = localStorage.getItem("duwaen");
-    if (savedDuwaen) {
-      setDuwaen(JSON.parse(savedDuwaen));
+    if (typeof window !== "undefined") {
+      const savedDuwaen = localStorage.getItem("duwaen");
+      return savedDuwaen ? JSON.parse(savedDuwaen) : initialDuaen;
+    } else {
+      return initialDuaen;
     }
-  }
-}, []);
+  });
 
-useEffect(() => {
-  if (typeof window !== 'undefined') {
-    localStorage.setItem("duwaen", JSON.stringify(duwaen));
-  }
-}, [duwaen]);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedDuwaen = localStorage.getItem("duwaen");
+      if (savedDuwaen) {
+        setDuwaen(JSON.parse(savedDuwaen));
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("duwaen", JSON.stringify(duwaen));
+    }
+  }, [duwaen]);
 
   const handleCount = () => {
     const newCount = count + 1;
     setCount(newCount);
     if (newCount === target) {
-  if (navigator.vibrate) {
-    navigator.vibrate(300); // Vibrate for 500 milliseconds
-    const vibrateInterval = setInterval(() => {
-      // Check if the Vibration API is supported by the browser
-      navigator.vibrate(300); // Vibrate for 500 milliseconds
-    }, 800);
-    setTimeout(() => {
-      clearInterval(vibrateInterval); // Stop the interval after 1 second (2 repetitions)
-    }, 1000);
-  } else {
-    console.log("Vibration API is not supported");
-    // Fallback to other feedback mechanism if the Vibration API is not supported
-  }
-  const audio = new Audio(audioPath);
-  audio.play(); // Play the beep sound when target is reached
-  const intervalId = setInterval(() => {
-    audio.play(); // Play the beep sound again after 500 milliseconds
-  }, 300);
-  setTimeout(() => {
-    clearInterval(intervalId); // Stop the interval after 1 second (2 repetitions)
-  }, 1000);
-  setTimeout(() => {
-    setCount(0);
-  }, 1000);
-}};
-  
+      if (navigator.vibrate) {
+        navigator.vibrate(300); // Vibrate for 500 milliseconds
+        const vibrateInterval = setInterval(() => {
+          // Check if the Vibration API is supported by the browser
+          navigator.vibrate(300); // Vibrate for 500 milliseconds
+        }, 800);
+        setTimeout(() => {
+          clearInterval(vibrateInterval); // Stop the interval after 1 second (2 repetitions)
+        }, 1000);
+      } else {
+        console.log("Vibration API is not supported");
+        // Fallback to other feedback mechanism if the Vibration API is not supported
+      }
+      const audio = new Audio(audioPath);
+      audio.play(); // Play the beep sound when target is reached
+      const intervalId = setInterval(() => {
+        audio.play(); // Play the beep sound again after 500 milliseconds
+      }, 300);
+      setTimeout(() => {
+        clearInterval(intervalId); // Stop the interval after 1 second (2 repetitions)
+      }, 1000);
+      setTimeout(() => {
+        setCount(0);
+      }, 1000);
+    }
+  };
+
   const handleChangeTarget = (newTarget: number) => {
     setTarget(newTarget);
     setCount(0);
   };
 
-  const handleAddDua = () => {
-    const arabicDua = prompt("تسبیح عربی میں درج کریں");
-    const tarjuma = prompt("تسبیح کا ترجمہ درجھ کریں");
+  const handleAddDua = (arabicDua: string, tarjuma: string) => {
     if (arabicDua && tarjuma) {
       const newDuwaen = [...duwaen, { arabicDua, tarjuma }];
       setDuwaen(newDuwaen);
+    }
+    setModleOpen(false);
+  };
+
+  const openModel = () => {
+    setModleOpen(true);
+  };
+
+  const handleDeleteDua = (index: number) => {
+    // Create a copy of the duwaen array without the dua at the specified index
+    if (confirm("are you sure  to want to dlete this one?")) {
+      const updatedDuwaen = [
+        ...duwaen.slice(0, index),
+        ...duwaen.slice(index + 1),
+      ];
+      // Update the state with the updated array
+      setDuwaen(updatedDuwaen);
     }
   };
 
@@ -86,6 +154,11 @@ useEffect(() => {
     <div
       className={`flex relative mx-auto flex-col items-center h-screen max-w-[450px] overflow-hidden pt-[70px]`}
     >
+      {modleOpen && (
+        <div>
+          <CustomPrompt onSubmit={handleAddDua} />
+        </div>
+      )}
       <div
         className={`pointer-events-none ${darkMode ? "dark-overlay" : ""}`}
       ></div>
@@ -99,15 +172,22 @@ useEffect(() => {
         {duwaen.map((dua, index) => (
           <div
             key={index}
-            className="max-w-80 min-w-[85%] h-auto rounded-lg border border-gray-600 flex flex-col flex-nowrap items-center justify-center"
+            className="relative max-w-80 min-w-[85%] h-auto rounded-lg border border-gray-600 flex flex-col flex-nowrap items-center justify-center"
           >
             <div className="arabic text-right p-4">{dua.arabicDua}</div>
             <div className="divider w-[90%] bg-gray-300 h-[2px]"></div>
             <div className="tarjuma text-right p-4">{dua.tarjuma}</div>
+            <div
+              onClick={() => handleDeleteDua(index)}
+              id="dltbtn"
+              className="absolute top-0 right-0 p-1"
+            >
+              <Trash2 size={20} />
+            </div>
           </div>
         ))}
         <div className="min-w-16 min-h-16 rounded-lg border border-gray-600 flex items-center justify-center">
-          <Plus size={40} strokeWidth={3} onClick={handleAddDua} />
+          <Plus size={40} strokeWidth={3} onClick={openModel} />
         </div>
       </div>
       <div className="mt-3 flex flex-col justify-center items-center">
