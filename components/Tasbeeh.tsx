@@ -1,6 +1,14 @@
 "use client";
-import { useState, useEffect } from "react";
-import { Check, Plus, Trash2 } from "lucide-react";
+import { useState, useEffect, MouseEvent } from "react";
+import {
+  Check,
+  Plus,
+  Trash2,
+  Vibrate,
+  VibrateOff,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 import "./css/tasbeeh.css";
 // import CustomPrompt from "./AzkarForm";
 
@@ -54,6 +62,8 @@ const TasbeehCounter = () => {
   const [target, setTarget] = useState(33);
   const [count, setCount] = useState(0);
   const [darkMode, setDarkMode] = useState(false);
+  const [sound, setSound] = useState(true);
+  const [vibrate, setVibrate] = useState(true);
   const [modleOpen, setModleOpen] = useState(false);
   const initialDuaen: Dua[] = [
     {
@@ -93,27 +103,27 @@ const TasbeehCounter = () => {
     const newCount = count + 1;
     setCount(newCount);
     if (newCount === target) {
-      if (navigator.vibrate) {
-        navigator.vibrate(300); // Vibrate for 500 milliseconds
+      if (vibrate && navigator.vibrate) {
+        navigator.vibrate(300);
         const vibrateInterval = setInterval(() => {
-          // Check if the Vibration API is supported by the browser
-          navigator.vibrate(300); // Vibrate for 500 milliseconds
+          navigator.vibrate(300);
         }, 800);
         setTimeout(() => {
-          clearInterval(vibrateInterval); // Stop the interval after 1 second (2 repetitions)
+          clearInterval(vibrateInterval);
         }, 1000);
       } else {
-        console.log("Vibration API is not supported");
-        // Fallback to other feedback mechanism if the Vibration API is not supported
+        console.log("Vibration API is not supported or vibration mode is off");
       }
-      const audio = new Audio(audioPath);
-      audio.play(); // Play the beep sound when target is reached
-      const intervalId = setInterval(() => {
-        audio.play(); // Play the beep sound again after 500 milliseconds
-      }, 300);
-      setTimeout(() => {
-        clearInterval(intervalId); // Stop the interval after 1 second (2 repetitions)
-      }, 1000);
+      if (sound) {
+        const audio = new Audio(audioPath);
+        audio.play(); // Play the beep sound when target is reached
+        const soundInterval = setInterval(() => {
+          audio.play(); // Play the beep sound again after 500 milliseconds
+        }, 300);
+        setTimeout(() => {
+          clearInterval(soundInterval);
+        }, 1000);
+      }
       setTimeout(() => {
         setCount(0);
       }, 1000);
@@ -149,8 +159,15 @@ const TasbeehCounter = () => {
     }
   };
 
+  const handleDarkMode = (e: MouseEvent<HTMLDivElement>) => {
+    if (e.target !== document.getElementById("counter-button")) {
+      darkMode && setDarkMode(false);
+    }
+  };
+
   return (
     <div
+      onClick={(e) => handleDarkMode(e)}
       className={`flex relative mx-auto flex-col items-center h-screen max-w-[450px] overflow-hidden pt-[70px]`}
     >
       {modleOpen && (
@@ -159,6 +176,19 @@ const TasbeehCounter = () => {
         </div>
       )}
       <div
+        onClick={() => setSound(!sound)}
+        className="absolute left-1 top-80 bg-black rounded-full w-[60px] h-[60px] grid place-items-center"
+      >
+        {sound ? <Volume2 /> : <VolumeX />}
+      </div>
+      <div
+        onClick={() => setVibrate(!vibrate)}
+        className="absolute right-1 top-80 bg-black rounded-full w-[60px] h-[60px] grid place-items-center"
+      >
+        {vibrate ? <Vibrate /> : <VibrateOff />}
+      </div>
+      <div
+        onClick={(e) => handleDarkMode(e)}
         className={`pointer-events-none ${darkMode ? "dark-overlay" : ""}`}
       ></div>
       <div className="mb-3 text-3xl font-bold">Target: {target}</div>
@@ -212,9 +242,9 @@ const TasbeehCounter = () => {
           onChange={(e) => handleChangeTarget(parseInt(e.target.value))}
         />
       </div>
-      <button onClick={() => setDarkMode(!darkMode)}>
+      <div onClick={(e) => setDarkMode(true)}>
         {darkMode ? "Turn the screen on" : "Turn the screen off"}
-      </button>
+      </div>
       <div className="flex min-h-6 items-center mt-4 text-green-500">
         {count === target && (
           <>
