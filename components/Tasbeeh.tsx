@@ -59,12 +59,31 @@ const CustomPrompt = ({
 };
 
 const TasbeehCounter = () => {
-  const [target, setTarget] = useState(33);
-  const [count, setCount] = useState(0);
+  const [target, setTarget] = useState(() => {
+    if (typeof window !== "undefined") {
+      const savedTarget = localStorage.getItem("target");
+      return savedTarget !== null && savedTarget !== "" && savedTarget !== "[]"
+        ? Number(savedTarget)
+        : 33;
+    } else {
+      return 33;
+    }
+  });
+  const [count, setCount] = useState(() => {
+    if (typeof window !== "undefined") {
+      const savedCount = localStorage.getItem("count");
+      return savedCount !== null && savedCount !== "" && savedCount !== "[]"
+        ? Number(savedCount)
+        : 0;
+    } else {
+      return 0;
+    }
+  });
   const [darkMode, setDarkMode] = useState(false);
   const [sound, setSound] = useState(true);
   const [vibrate, setVibrate] = useState(true);
   const [modleOpen, setModleOpen] = useState(false);
+  const [clientSide, setClientSide] = useState(false);
   const initialDuaen: Dua[] = [
     {
       arabicDua:
@@ -90,6 +109,7 @@ const TasbeehCounter = () => {
       if (savedDuwaen) {
         setDuwaen(JSON.parse(savedDuwaen));
       }
+      setClientSide(true);
     }
   }, []);
 
@@ -98,6 +118,16 @@ const TasbeehCounter = () => {
       localStorage.setItem("duwaen", JSON.stringify(duwaen));
     }
   }, [duwaen]);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("target", target.toString());
+    }
+  }, [target]);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("count", count.toString());
+    }
+  }, [count]);
 
   const handleCount = () => {
     const newCount = count + 1;
@@ -177,7 +207,7 @@ const TasbeehCounter = () => {
       )}
       <div
         onClick={() => setSound(!sound)}
-        className="absolute left-1 top-80 bg-black rounded-full w-[60px] h-[60px] grid place-items-center"
+        className="absolute left-1 top-80 bg-black rounded-full w-[60px] h-[60px] grid place-items-center z-[105]"
       >
         {sound ? <Volume2 /> : <VolumeX />}
       </div>
@@ -191,47 +221,52 @@ const TasbeehCounter = () => {
         onClick={(e) => handleDarkMode(e)}
         className={`pointer-events-none ${darkMode ? "dark-overlay" : ""}`}
       ></div>
-      <div className="mb-3 text-3xl font-bold">Target: {target}</div>
+      <div className="mb-3 text-3xl font-bold">
+        {clientSide && `Target: ${target}`}
+      </div>
       <div className="head mb-3">ازکار و تسبیحات</div>
-      <div
-        className="flex items-center gap-4 flex-row min-h-[215px] min-w-[95%] px-4 overflow-scroll"
-        dir="rtl"
-      >
-        {/* Render existing duaen */}
-        {duwaen.map((dua, index) => (
-          <div
-            key={index}
-            className="relative max-w-80 min-w-[85%] h-auto rounded-lg border border-gray-600 flex flex-col flex-nowrap items-center justify-center"
-          >
-            <div className="arabic text-right p-4">{dua.arabicDua}</div>
-            <div className="divider w-[90%] bg-gray-300 h-[2px]"></div>
-            <div className="tarjuma text-right p-4">{dua.tarjuma}</div>
-            <div
-              onClick={() => handleDeleteDua(index)}
-              id="dltbtn"
-              className="absolute top-0 right-0 p-1"
-            >
-              <Trash2 size={20} />
+      <div className="overflow-x-auto" dir="rtl">
+        {clientSide && (
+          <div className="flex gap-4 min-h-[215px] px-4">
+            {/* Render existing duaen */}
+            {duwaen.map((dua, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 max-w-80 w-[85%] h-auto rounded-lg border border-gray-600 flex flex-col items-center justify-center"
+              >
+                <div className="arabic text-right p-4">{dua.arabicDua}</div>
+                <div className="divider w-[90%] bg-gray-300 h-[2px]"></div>
+                <div className="tarjuma text-right p-4">{dua.tarjuma}</div>
+                <div
+                  onClick={() => handleDeleteDua(index)}
+                  id="dltbtn"
+                  className="absolute top-0 right-0 p-1"
+                >
+                  <Trash2 size={20} />
+                </div>
+              </div>
+            ))}
+            <div className="min-w-16 min-h-16 rounded-lg border border-gray-600 flex items-center justify-center">
+              <Plus size={40} strokeWidth={3} onClick={openModel} />
             </div>
           </div>
-        ))}
-        <div className="min-w-16 min-h-16 rounded-lg border border-gray-600 flex items-center justify-center">
-          <Plus size={40} strokeWidth={3} onClick={openModel} />
-        </div>
+        )}
       </div>
+
       <div className="mt-3 flex flex-col justify-center items-center">
         <div className="flex justify-center items-center">
-          {[7, 10, 33, 34, 40, 100].map((value) => (
-            <button
-              key={value}
-              className={`${
-                value === target ? "bg-blue-500 text-white" : "bg-gray-600"
-              } active:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2`}
-              onClick={() => handleChangeTarget(value)}
-            >
-              {value}
-            </button>
-          ))}
+          {clientSide &&
+            [7, 10, 33, 34, 40, 100].map((value) => (
+              <button
+                key={value}
+                className={`${
+                  value === target ? "bg-blue-500 text-white" : "bg-gray-600"
+                } active:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2`}
+                onClick={() => handleChangeTarget(value)}
+              >
+                {value}
+              </button>
+            ))}
         </div>
         <input
           type="number"
@@ -259,7 +294,7 @@ const TasbeehCounter = () => {
         onClick={handleCount}
       >
         <div id="counter" className="text-6xl mb-4">
-          {count}
+          {clientSide && count}
         </div>
       </div>
     </div>
