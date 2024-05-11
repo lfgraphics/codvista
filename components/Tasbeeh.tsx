@@ -207,13 +207,13 @@ const TasbeehCounter = () => {
       )}
       <div
         onClick={() => setSound(!sound)}
-        className="absolute left-1 top-80 bg-black rounded-full w-[60px] h-[60px] grid place-items-center z-[105]"
+        className="absolute left-1 bottom-80 bg-black rounded-full w-[60px] h-[60px] grid place-items-center z-[105]"
       >
         {sound ? <Volume2 /> : <VolumeX />}
       </div>
       <div
         onClick={() => setVibrate(!vibrate)}
-        className="absolute right-1 top-80 bg-black rounded-full w-[60px] h-[60px] grid place-items-center"
+        className="absolute right-1 bottom-80 bg-black rounded-full w-[60px] h-[60px] grid place-items-center"
       >
         {vibrate ? <Vibrate /> : <VibrateOff />}
       </div>
