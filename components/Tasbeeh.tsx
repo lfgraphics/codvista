@@ -232,7 +232,7 @@ const TasbeehCounter = () => {
             {duwaen.map((dua, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 max-w-80 w-[85%] h-auto rounded-lg border border-gray-600 flex flex-col items-center justify-center"
+                className="relative flex-shrink-0 max-w-80 w-[85%] h-auto rounded-lg border border-gray-600 flex flex-col items-center justify-center"
               >
                 <div className="arabic text-right p-4">{dua.arabicDua}</div>
                 <div className="divider w-[90%] bg-gray-300 h-[2px]"></div>

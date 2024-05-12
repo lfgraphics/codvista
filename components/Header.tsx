@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Container from "./ui/container";
 import Image from "next/image";
@@ -15,56 +15,35 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
+interface Services {
+  title: string;
+  url: string;
+}
+
 const Header = () => {
   const [menuopen, setMenuOpen] = useState(false);
   const menuHandle = () => {
     setMenuOpen(!menuopen);
   };
-  const services = [
-    {
-      title: { title: "Graphic Design", icon: <PenTool /> },
-      subServices: [
-        { title: "Branding", icon: Menu },
-        { title: "Rebranding", icon: Menu },
-        { title: "Print Graphics", icon: Menu },
-        { title: "Digital Graphics", icon: Menu },
-        // Add more sub-services as needed
-      ],
-    },
-    {
-      title: { title: "Digital Marketing", icon: <PenTool /> },
-      subServices: [
-        { title: "Social Media Management", icon: Menu },
-        { title: "Google Ads", icon: Menu },
-        { title: "SEO", icon: Menu },
-        { title: "Message Marketing", icon: Menu },
-        // Add more sub-services as needed
-      ],
-    },
-    {
-      title: { title: "Web & App Development", icon: <PenTool /> },
-      subServices: [
-        { title: "Responsive Websites", icon: Menu },
-        { title: "Full Stack", icon: Menu },
-        { title: "Dynamic and Static Websites/Webpages", icon: Menu },
-        { title: "Progressive Web App", icon: Menu },
-        { title: "Android & iOS Apps Development", icon: Menu },
-        // Add more sub-services as needed
-      ],
-    },
-    {
-      title: { title: "Cybersecurity", icon: <PenTool /> },
-      subServices: [
-        { title: "Cloud Security", icon: Menu },
-        { title: "Application Security", icon: Menu },
-        { title: "Network Security", icon: Menu },
-        { title: "Ransomware", icon: Menu },
-        { title: "Authentication", icon: Menu },
-        { title: "Data Security", icon: Menu },
-        { title: "Web Pentesting", icon: Menu },
-        // Add more sub-services as needed
-      ],
-    },
+  const services: Services[] = [
+    { title: "About Us", url: "/about" },
+    { title: "Our Services", url: "/services" },
+    { title: "Contact Us", url: "/contact" },
+    { title: "Privacy Policy", url: "/privacy-policy" },
+    { title: "Refund Policy", url: "/refund-policy" },
+    { title: "Terms and Conditions", url: "/terms-conditions" },
+    { title: "Tasbeeh", url: "/tasbeeh" },
   ];
 
   return (
@@ -84,46 +63,46 @@ const Header = () => {
           </div>
           <div className="leftDiv  flex items-center gap-5">
             <ul className="hidden relative gap-3 items-center md:flex">
-              <li>
-                <NavigationMenu>
-                  <NavigationMenuList>
-                    <NavigationMenuItem>
-                      <NavigationMenuTrigger className="bg-transparent">Services</NavigationMenuTrigger>
-                      <NavigationMenuContent asChild className="">
-                        <div className="flex gap-2 p-4 text-white bg-slate-900 border-none outline-none">
-                          {services.map((service, index) => (
-                            <div key={index}>
-                              <h2 className="text-lg">{service.title.title}</h2>
-                              <ul className="min-w-56">
-                                {service.subServices.map((subService) => (
-                                  <li key={subService.title}>
-                                    <span className="cursor-pointer">
-                                      {subService.title}
-                                    </span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          ))}
-                        </div>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  </NavigationMenuList>
-                </NavigationMenu>
-              </li>
-              <li>
-                <Link href={"#about"}>About US</Link>
-              </li>
-              <li>
-                <Link href={"/contact"}>Contact US</Link>
-              </li>
+              {services.map((service, index) => (
+                <li
+                  className="cursor-pointer px-2 rounded-md hover:bg-purple-800 transition-all 500 ease-in-out"
+                  key={index}
+                >
+                  <Link href={service.url}>{service.title}</Link>
+                </li>
+              ))}
             </ul>
-            <div
+            <Sheet>
+              <SheetTrigger className="cursor-pointer block md:hidden" asChild>
+                {!menuopen ? <Menu size={32} /> : <X size={32} />}
+              </SheetTrigger>
+              <SheetContent className="bg-black" >
+                <SheetHeader>
+                  <SheetTitle className="text-white text-2xl">Cod Vista</SheetTitle>
+                  <SheetDescription className="hidden">
+                    Make changes to your profile here. Click save when you're
+                    done.
+                  </SheetDescription>
+                </SheetHeader>
+                <ul className="grid gap-3 grid-flow-row mt-9">
+                  {services.map((service, index) => (
+                    <li
+                      className="text-lg px-2 rounded-md hover:bg-purple-800 transition-all 500 ease-in-out"
+                      key={index}
+                    >
+                      <Link href={service.url}>{service.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+                <SheetFooter>
+                  <SheetClose asChild></SheetClose>
+                </SheetFooter>
+              </SheetContent>
+            </Sheet>
+            {/* <div
               onClick={menuHandle}
               className="cursor-pointer block md:hidden"
-            >
-              {!menuopen ? <Menu size={32} /> : <X size={32} />}
-            </div>
+            ></div> */}
           </div>
         </div>
       </Container>

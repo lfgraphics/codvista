@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+"use client";
 import { Kanit } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useEffect, useState } from "react";
 
 const inter = Kanit({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -17,6 +18,50 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Listen for the beforeunload event
+  useEffect(() => {
+    if (window !== undefined) {
+      window.addEventListener("beforeunload", function (event) {
+        // Get the current URL
+        const currentUrl = window.location.pathname;
+
+        // Check if the current URL is "/tasbeeh"
+        if (currentUrl === "/tasbeeh") {
+          // Update the start_url in the manifest to "/tasbeeh"
+          updateManifestStartUrl("/tasbeeh");
+        } else {
+          // Update the start_url in the manifest to "/"
+          updateManifestStartUrl("/");
+        }
+      });
+    }
+  }, []);
+
+  // Function to update the start_url in the manifest file
+  function updateManifestStartUrl(startUrl: string) {
+    fetch("manifest.json") // Assuming your manifest file is named manifest.json
+      .then((response) => response.json())
+      .then((manifest) => {
+        // Update the start_url property
+        manifest.start_url = startUrl;
+
+        // Save the updated manifest back to the file
+        return fetch("manifest.json", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(manifest),
+        });
+      })
+      .then(() => {
+        console.log("Manifest start_url updated successfully");
+      })
+      .catch((error) => {
+        console.error("Error updating manifest start_url:", error);
+      });
+  }
+
   return (
     <html lang="en">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
