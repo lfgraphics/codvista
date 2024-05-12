@@ -125,7 +125,7 @@ export default function RootLayout({
       />
       <link rel="manifest" href="/manifest.json" />
       <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta name="theme-color" content="#673E93" />
+      <meta name="theme-color" content="#6a6070" />
       <head>
         <link
           rel="stylesheet"

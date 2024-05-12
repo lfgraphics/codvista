@@ -4,8 +4,8 @@
     "description": "A full-services digital transformation partner",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#18111C",
-    "theme_color": "#673E93",
+    "background_color": "#18111c",
+    "theme_color": "#6a6070",
     "icons": [
         {
             "src": "\/favicon\/android-icon-36x36.png",
