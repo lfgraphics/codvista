@@ -42,8 +42,8 @@ const Header = () => {
     { title: "Contact Us", url: "/contact" },
     { title: "Privacy Policy", url: "/privacy-policy" },
     { title: "Refund Policy", url: "/refund-policy" },
-    { title: "Terms and Conditions", url: "/terms-conditions" },
-    { title: "Tasbeeh", url: "/tasbeeh" },
+    { title: "Terms of Services", url: "/terms-of-services" },
+    { title: "Products", url: "/products" },
   ];
 
   return (
@@ -76,9 +76,11 @@ const Header = () => {
               <SheetTrigger className="cursor-pointer block md:hidden" asChild>
                 {!menuopen ? <Menu size={32} /> : <X size={32} />}
               </SheetTrigger>
-              <SheetContent className="bg-black" >
+              <SheetContent className="bg-black">
                 <SheetHeader>
-                  <SheetTitle className="text-white text-2xl">Cod Vista</SheetTitle>
+                  <SheetTitle className="text-white text-2xl">
+                    Cod Vista
+                  </SheetTitle>
                   <SheetDescription className="hidden">
                     Make changes to your profile here. Click save when you're
                     done.

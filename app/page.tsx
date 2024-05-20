@@ -141,7 +141,7 @@ export default function App() {
   return (
     <>
       {/* Hero Section */}
-      <div className="mt-14 w-full text-white overflow-hidden">
+      <div className="w-full text-white overflow-hidden">
         <Container>
           <div className="flex flex-col md:flex-row w-full gap-4 items-center justify-center">
             {/* hero text and CTA*/}

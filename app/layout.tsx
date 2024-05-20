@@ -163,7 +163,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <SpeedInsights />
-        <div className="header fixed top-0 w-full bg-[#18111c] bg-opacity-70 z-50 backdrop-blur-md">
+        <div className="header sticky top-0 w-full bg-[#18111c] bg-opacity-70 z-50 backdrop-blur-md">
           <Header />
         </div>
         {children}

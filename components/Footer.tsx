@@ -109,7 +109,7 @@ const Footer = () => {
                   <Twitter strokeWidth={1} />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/cod-vista-356115300/"
+                  href="https://www.linkedin.com/company/cod-vista"
                   className="hover:text-blue-700"
                 >
                   <Linkedin strokeWidth={1} />
