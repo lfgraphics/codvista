@@ -146,7 +146,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row w-full gap-4 items-center justify-center">
             {/* hero text and CTA*/}
             <div className="max-w-lg  py-16 sm:left-9 z-20 sm:ml-11">
-              - This website is under development
+             
               <h1 className="text-5xl mb-4" style={{ fontWeight: "600" }}>
                 Unlock Digital Success with Cod Vista!
               </h1>

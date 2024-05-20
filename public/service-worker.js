@@ -8,6 +8,7 @@ if (typeof self !== 'undefined') {
                 return cache.addAll([
                     '/',
                     'logo.png',
+                    'logo.svg',
                     'manifest.json',
                     'beep.mp3',
                 ]);
