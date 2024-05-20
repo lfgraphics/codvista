@@ -1,23 +1,23 @@
-// pages/products.js
 import Head from "next/head";
 import RedirectButton from "@/components/ui/redirectButton";
 import Container from "@/components/ui/container";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Products | Cod Vista",
+  description:
+    "Explore Cod Vista's range of digital products in digital marketing, development, cybersecurity, and graphic design.",
+  metadataBase: new URL("https://www.codvista.com/products"),
+  openGraph: {
+    images: [
+      "https://images.unsplash.com/photo-1592609930961-219235eded71?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8c29mdHdhcmV8fHx8fHwxNzE2MjEyNjUz&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800",
+    ],
+  },
+};
+
 export default function Products() {
   return (
     <Container>
-      <Head>
-        <title>Products | Cod Vista</title>
-        <meta
-          name="description"
-          content="Explore Cod Vista's range of digital products in digital marketing, development, cybersecurity, and graphic design."
-        />
-        <meta
-          name="keywords"
-          content="Cod Vista, Digital Products, Digital Marketing, Development, Cybersecurity, Graphic Design"
-        />
-      </Head>
       <div className="container mx-auto p-6">
         <h1 className="text-4xl font-bold mb-6">Our Digital Products</h1>
 
