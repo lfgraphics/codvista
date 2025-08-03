@@ -7,7 +7,7 @@ interface ActionButtonProps {
 
 const ActionButton: React.FC<ActionButtonProps> = ({ text }) => {
   return (
-    <Link href="/contact">
+    <Link href="#contact">
     <button>
       {text}
       <div className="star-1"><Star color="fill-white"/></div>

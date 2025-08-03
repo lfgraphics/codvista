@@ -23,28 +23,6 @@ const Footer = () => {
               height={200}
             ></Image> */}
             </div>
-            <h3 className="text-lg font-bold">Contact Us</h3>
-            {/* <h6 className="mt-3 font-bold">United States</h6> */}
-            <ul>
-              <li>
-                <p className="text-xs">
-                  Shop Number 9, 1st Floor, SK Plaza, Choteqazipur,Miyan Bazar
-                  Dakshini,Gorakhpur, Uttar Pradesh 273001
-                </p>
-              </li>
-              <li className="text-xs">
-                <a
-                  href="mailto:contact@codvista.com"
-                  className="hover:text-blue-700"
-                >
-                  contact@codvista.com
-                </a>
-                {"    "}
-                <a href="tel:+919005228782" className="hover:text-blue-700">
-                  (+91) 9005 2287 82
-                </a>
-              </li>
-            </ul>
           </div>
           <div className="my-4 md:w-1/3 md:border-r-2 md:border-r-gray-500 pl-6">
             <h3 className="text-lg font-bold">Important Links</h3>
@@ -69,11 +47,11 @@ const Footer = () => {
                   Terms and Conditions
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="/refund-policy" className="hover:text-blue-700">
                   Refund Policy
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="my-4 md:w-1/3 pl-6">
@@ -99,6 +77,28 @@ const Footer = () => {
                 )}
               </li>
             </ul>
+            <h3 className="text-lg font-bold" id="contact">Contact Us</h3>
+            {/* <h6 className="mt-3 font-bold">United States</h6> */}
+            <ul>
+              {/* <li>
+                <p className="text-xs">
+                  Shop Number 9, 1st Floor, SK Plaza, Choteqazipur,Miyan Bazar
+                  Dakshini,Gorakhpur, Uttar Pradesh 273001
+                </p>
+              </li> */}
+              <li className="text-xs">
+                <a
+                  href="mailto:contact@codvista.com"
+                  className="hover:text-blue-700"
+                >
+                  contact@codvista.com
+                </a>
+                {"    "}
+                {/* <a href="tel:+919005228782" className="hover:text-blue-700">
+                  (+91) 9005 2287 82
+                </a> */}
+              </li>
+            </ul>
             <div className="mt-3 border-t border-t-gray-500 mr-6">
               <h3 className="text-lg font-bold pb-2 pt-3">Socials</h3>
               <div className="flex gap-3">
@@ -114,12 +114,12 @@ const Footer = () => {
                 >
                   <Linkedin strokeWidth={1} />
                 </a>
-                <a
+                {/* <a
                   href="https://www.instagram.com/codvista/"
                   className="hover:text-blue-700"
                 >
                   <Instagram strokeWidth={1} />
-                </a>
+                </a> */}
                 <a
                   href="https://www.facebook.com/profile.php?id=61555510815916&mibextid=ZbWKwL"
                   className="hover:text-blue-700"
@@ -132,7 +132,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="attribute w-full p-2 text-center">
-        Copyright © 2024 Cod Vista - All rights reserved
+        Copyright © 2025 Cod Vista - All rights reserved
       </div>
     </>
   );

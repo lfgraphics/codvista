@@ -496,9 +496,6 @@ export default function App() {
                   <div className="first flex gap-4 ml-4 py-5">
                     {images.map((obj) => (
                       <>
-                        {/* <span className="absolute -top-8 z-50 bg-white w-32 text-black text-center px-2 rounded-lg">
-                          {obj.name}
-                        </span> */}
                         <div className="relative text-center bg-white w-20 h-20 rounded-xl cursor-pointer overflow-hidden filter grayscale hover:scale-125 hover:filter-none transition-all ease-in-out">
                           {obj.url ? (
                             <Link href={`${obj.url}`} target="_blank">

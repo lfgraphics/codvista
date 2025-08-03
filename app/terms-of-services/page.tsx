@@ -109,7 +109,7 @@ export default function TermsOfService() {
                 contact@codvista.com
               </Link>
             </li>
-            <li>
+            {/* <li>
               <strong>Phone:</strong>
               <ul className="list-disc pl-6">
                 <li>
@@ -129,7 +129,7 @@ export default function TermsOfService() {
                   </Link>
                 </li>
               </ul>
-            </li>
+            </li> */}
             <li>
               <strong>Address:</strong> Shop Number 9, 1st Floor, SK Plaza,
               Choteqazipur, Miyan Bazar Dakshini, Gorakhpur, Uttar Pradesh

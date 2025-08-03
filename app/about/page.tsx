@@ -171,14 +171,14 @@ const page = () => {
           </h1>
           <div className="mission-vision-values">
             <p className="text-lg md:text-xl ">
-              <strong className="text-2xl">With a vision</strong> to
+              {/* <strong className="text-2xl">With a vision</strong> to
               revolutionize the digital landscape. Founder, Taha Kazmi, a
               passionate graphics designer + programmer, felt the need for a
               platform where all digital services could be met under one roof.
               In 2020, collaborating with (co-founder) Mohammad Saif, a renowned
               white hat hacker, the idea took flight.
               <br />
-              <br />
+              <br /> */}
               Saif's expertise in cybersecurity added a layer of protection,
               ensuring clients' assets remain secure in an increasingly volatile
               online world while Taha's creativity and innovative thinking laid

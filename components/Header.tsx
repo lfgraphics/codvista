@@ -37,13 +37,13 @@ const Header = () => {
     setMenuOpen(!menuopen);
   };
   const services: Services[] = [
-    { title: "About Us", url: "/about" },
     { title: "Our Services", url: "/services" },
-    { title: "Contact Us", url: "/contact" },
+    // { title: "Contact Us", url: "/contact" },
     { title: "Privacy Policy", url: "/privacy-policy" },
-    { title: "Refund Policy", url: "/refund-policy" },
+    // { title: "Refund Policy", url: "/refund-policy" },
     { title: "Terms of Services", url: "/terms-of-services" },
     { title: "Products", url: "/products" },
+    { title: "About Us", url: "/about" },
   ];
 
   return (

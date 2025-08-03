@@ -89,12 +89,12 @@ const page = () => {
                   only catch the eye but also tell your unique story, thereby
                   forging deeper connections with your audience on a whole new
                   level.
-                  <span className="block m-4">
+                  {/* <span className="block m-4">
                     <RedirectButton
                       text="Know More"
                       url="/services/graphic-design"
                     />
-                  </span>
+                  </span> */}
                 </p>
               </div>
               <div className="right w-[90%] overflow-hidden rounded-xl max-h-[400px] flex items-center">

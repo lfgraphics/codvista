@@ -153,7 +153,7 @@ export default function PrivacyPolicy() {
                   contact@codvista.com
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <strong>Phone:</strong>
                 <ul className="list-disc pl-6">
                   <li>
@@ -178,7 +178,7 @@ export default function PrivacyPolicy() {
                 <strong>Address:</strong> Shop Number 9, 1st Floor, SK Plaza,
                 Choteqazipur, Miyan Bazar Dakshini, Gorakhpur, Uttar Pradesh
                 273001
-              </li>
+              </li> */}
             </ul>
           </p>
         </div>
