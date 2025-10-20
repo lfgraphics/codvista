@@ -29,7 +29,7 @@ const page = () => {
           <div className="image rounded-lg overflow-hidden md:w-[45%] ">
             <Image
               className="w-full z-400"
-              src={"/home-page/digital-marketing.png"}
+              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
               alt="Cod Vista Team"
               width={300}
               height={450}

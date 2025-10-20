@@ -46,7 +46,7 @@ const page = () => {
           </div>
         </div>
         <div className="mission-vision">
-          <h1 className="text-center md:text-6xl font-bold text-4xl my-7">
+          <h1 className="text-center md:text-6xl font-bold text-4xl my-7 mt-14">
             Our Mission and vision
           </h1>
           <div className="mission-vision-values justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -106,7 +106,7 @@ const page = () => {
           </div>
         </div>
         <div className="why-us?">
-          <h1 className="text-center md:text-6xl font-bold text-4xl my-7">
+          <h1 className="text-center md:text-6xl font-bold text-4xl my-7 mt-14">
             Why Chose Us?
           </h1>
           <div className="mission-vision-values justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -166,19 +166,19 @@ const page = () => {
           </div>
         </div>
         <div className="TEAMS">
-          <h1 className="text-center md:text-6xl font-bold text-4xl my-7">
+          <h1 className="text-center md:text-6xl font-bold text-4xl my-7 mt-14">
             TEAMS
           </h1>
           <div className="mission-vision-values">
             <p className="text-lg md:text-xl ">
-              {/* <strong className="text-2xl">With a vision</strong> to
+              <strong className="text-2xl">With a vision</strong> to
               revolutionize the digital landscape. Founder, Taha Kazmi, a
               passionate graphics designer + programmer, felt the need for a
               platform where all digital services could be met under one roof.
               In 2020, collaborating with (co-founder) Mohammad Saif, a renowned
               white hat hacker, the idea took flight.
               <br />
-              <br /> */}
+              <br />
               Saif's expertise in cybersecurity added a layer of protection,
               ensuring clients' assets remain secure in an increasingly volatile
               online world while Taha's creativity and innovative thinking laid

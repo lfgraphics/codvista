@@ -146,7 +146,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row w-full gap-4 items-center justify-center">
             {/* hero text and CTA*/}
             <div className="max-w-lg  py-16 sm:left-9 z-20 sm:ml-11">
-             
+
               <h1 className="text-5xl mb-4" style={{ fontWeight: "600" }}>
                 Unlock Digital Success with Cod Vista!
               </h1>
@@ -496,6 +496,9 @@ export default function App() {
                   <div className="first flex gap-4 ml-4 py-5">
                     {images.map((obj) => (
                       <>
+                        {/* <span className="absolute -top-8 z-50 bg-white w-32 text-black text-center px-2 rounded-lg">
+                          {obj.name}
+                        </span> */}
                         <div className="relative text-center bg-white w-20 h-20 rounded-xl cursor-pointer overflow-hidden filter grayscale hover:scale-125 hover:filter-none transition-all ease-in-out">
                           {obj.url ? (
                             <Link href={`${obj.url}`} target="_blank">
@@ -569,13 +572,13 @@ export default function App() {
                       </p>
                     </div>
                     <div className="right w-[90%] relative overflow-hidden rounded-xl max-h-[400px] flex items-center">
-                      <Image
+                      <img
                         className="w-full btn-4"
-                        src={"/home-page/marketing.jpg"}
+                        src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
                         alt={""}
                         width={400}
                         height={350}
-                      ></Image>
+                      ></img>
                     </div>
                   </div>
                 </div>
@@ -612,13 +615,13 @@ export default function App() {
                       </p>
                     </div>
                     <div className="right w-[90%] overflow-hidden rounded-xl max-h-[400px] flex items-center">
-                      <Image
+                      <img
                         className="w-full"
-                        src={"/home-page/gfx.jpg"}
+                        src="https://plus.unsplash.com/premium_photo-1661284886711-4eaee4fa7771?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
                         alt={""}
                         width={400}
                         height={350}
-                      ></Image>
+                      ></img>
                     </div>
                   </div>
                 </div>
@@ -660,13 +663,13 @@ export default function App() {
                       </p>
                     </div>
                     <div className="right w-[90%] overflow-hidden rounded-xl max-h-[400px] flex items-center">
-                      <Image
+                      <img
                         className="w-full"
-                        src={"/home-page/dev.jpg"}
+                        src="https://plus.unsplash.com/premium_photo-1683134153517-32015af21911?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
                         alt={""}
                         width={400}
                         height={350}
-                      ></Image>
+                      ></img>
                     </div>
                   </div>
                 </div>
@@ -716,9 +719,9 @@ export default function App() {
                       </p>
                     </div>
                     <div className="right w-[90%] overflow-hidden rounded-xl max-h-[400px] flex items-center">
-                      <Image
+                      <img
                         className="w-full"
-                        src={"/home-page/security.jpg"}
+                        src="https://plus.unsplash.com/premium_photo-1733317239304-a6bf462a2596?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
                         alt={""}
                         width={400}
                         height={350}

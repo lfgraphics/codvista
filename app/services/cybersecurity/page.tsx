@@ -129,13 +129,13 @@ const page = () => {
                 </p>
               </div>
               <div className="right w-[90%] overflow-hidden rounded-xl max-h-[400px] flex items-center">
-                <Image
+                <img
                   className="w-full"
-                  src={"/services/dm/smm.jpg"}
+                  src="https://plus.unsplash.com/premium_photo-1733317239304-a6bf462a2596?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
                   alt={""}
                   width={400}
                   height={350}
-                ></Image>
+                ></img>
               </div>
             </div>
           </div>

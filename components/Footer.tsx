@@ -16,27 +16,21 @@ const Footer = () => {
           <div className="my-4 md:w-1/3 md:border-r-2 md:border-r-gray-500 pl-6 pr-6">
             <div className="my-4 md:w-1/3 ">
               <img src="logo.svg" alt="logo" />
-              {/* <Image
-              src={"logo.svg"}
-              alt={"logo"}
-              width={400}
-              height={200}
-            ></Image> */}
             </div>
           </div>
           <div className="my-4 md:w-1/3 md:border-r-2 md:border-r-gray-500 pl-6">
             <h3 className="text-lg font-bold">Important Links</h3>
             <ul className="mt-3">
+              <li>
+                <a href="/contact" className="hover:text-blue-700">
+                  Contact
+                </a>
+              </li>
               {/* <li>
-              <a href="/contact" className="hover:text-blue-700">
-                Contact
-              </a>
-            </li> */}
-              {/* <li>
-              <a href="/cookies-policy" className="hover:text-blue-700">
-                Cookies Policy
-              </a>
-            </li> */}
+                <a href="/cookies-policy" className="hover:text-blue-700">
+                  Cookies Policy
+                </a>
+              </li> */}
               <li>
                 <a href="/privacy-policy" className="hover:text-blue-700">
                   Privacy Policy
@@ -47,11 +41,11 @@ const Footer = () => {
                   Terms and Conditions
                 </a>
               </li>
-              {/* <li>
+              <li>
                 <a href="/refund-policy" className="hover:text-blue-700">
                   Refund Policy
                 </a>
-              </li> */}
+              </li>
             </ul>
           </div>
           <div className="my-4 md:w-1/3 pl-6">
@@ -78,25 +72,38 @@ const Footer = () => {
               </li>
             </ul>
             <h3 className="text-lg font-bold" id="contact">Contact Us</h3>
-            {/* <h6 className="mt-3 font-bold">United States</h6> */}
+            {/* <h6 className="mt-3 font-bold">India</h6> */}
             <ul>
-              {/* <li>
+              <li>
                 <p className="text-xs">
-                  Shop Number 9, 1st Floor, SK Plaza, Choteqazipur,Miyan Bazar
-                  Dakshini,Gorakhpur, Uttar Pradesh 273001
+                  Gorakhpur, Uttar Pradesh 273001
                 </p>
-              </li> */}
+              </li>
               <li className="text-xs">
-                <a
-                  href="mailto:contact@codvista.com"
+                <Link
+                  href="mailto:support@codvista.com"
                   className="hover:text-blue-700"
                 >
-                  contact@codvista.com
-                </a>
-                {"    "}
-                {/* <a href="tel:+919005228782" className="hover:text-blue-700">
-                  (+91) 9005 2287 82
-                </a> */}
+                  support@codvista.com
+                </Link>
+              </li>
+              <li className="text-xs">
+                <Link
+                  title="Taha Kazmi's Contact Number"
+                  href="tel:+916393440986"
+                  className="text-blue-600 hover:text-purple-600 visited:text-purple-600"
+                >
+                  +91 6393 4409 86
+                </Link>
+              </li>
+              <li className="text-xs">
+                <Link
+                  title="Yusuf Khan's Contact Number"
+                  href="tel:+919005228782"
+                  className="text-blue-600 hover:text-purple-600 visited:text-purple-600"
+                >
+                  +91 9005 2287 82
+                </Link>
               </li>
             </ul>
             <div className="mt-3 border-t border-t-gray-500 mr-6">
@@ -130,7 +137,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer >
       <div className="attribute w-full p-2 text-center">
         Copyright © 2025 Cod Vista - All rights reserved
       </div>

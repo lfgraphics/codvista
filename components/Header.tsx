@@ -3,17 +3,7 @@ import React, { useState } from "react";
 import Container from "./ui/container";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, PenTool } from "lucide-react";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
+import { Menu, X, } from "lucide-react";
 
 import {
   Sheet,
@@ -40,9 +30,9 @@ const Header = () => {
     { title: "Our Services", url: "/services" },
     // { title: "Contact Us", url: "/contact" },
     { title: "Privacy Policy", url: "/privacy-policy" },
-    // { title: "Refund Policy", url: "/refund-policy" },
+    { title: "Refund Policy", url: "/refund-policy" },
     { title: "Terms of Services", url: "/terms-of-services" },
-    { title: "Products", url: "/products" },
+    // { title: "Services", url: "/services" },
     { title: "About Us", url: "/about" },
   ];
 

@@ -94,49 +94,6 @@ export default function TermsOfService() {
           subject to the exclusive jurisdiction of the courts located in
           Gorakhpur, Uttar Pradesh.
         </p>
-        <h2 className="text-2xl font-semibold mb-2">Contact Us</h2>
-        <p className="mb-4">
-          If you have any questions or concerns about this Privacy Policy,
-          please contact us at:
-          <ul className="list-disc pl-6">
-            <li>
-              <strong>Email:</strong>{" "}
-              <Link
-                className="text-blue-600 hover:text-purple-600 visited:text-purple-600"
-                target="_new"
-                href="mailto:contact@codvista.com"
-              >
-                contact@codvista.com
-              </Link>
-            </li>
-            {/* <li>
-              <strong>Phone:</strong>
-              <ul className="list-disc pl-6">
-                <li>
-                  <Link
-                    href="tel:+919005228782"
-                    className="text-blue-600 hover:text-purple-600 visited:text-purple-600"
-                  >
-                    +91 9005 2287 82
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="tel:+916393440986"
-                    className="text-blue-600 hover:text-purple-600 visited:text-purple-600"
-                  >
-                    +91 6393 4409 86
-                  </Link>
-                </li>
-              </ul>
-            </li> */}
-            <li>
-              <strong>Address:</strong> Shop Number 9, 1st Floor, SK Plaza,
-              Choteqazipur, Miyan Bazar Dakshini, Gorakhpur, Uttar Pradesh
-              273001
-            </li>
-          </ul>
-        </p>
       </div>
     </div>
   );

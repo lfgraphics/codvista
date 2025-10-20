@@ -26,9 +26,9 @@ const page = () => {
             </div>
           </div>
           <div className="image rounded-lg overflow-hidden md:w-[45%] ">
-            <Image
+            <img
               className="w-full z-400"
-              src={"/home-page/gfx.jpg"}
+              src="https://plus.unsplash.com/premium_photo-1661284886711-4eaee4fa7771?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z3JhcGhpYyUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
               alt="Cod Vista Team"
               width={300}
               height={450}
