@@ -2,14 +2,14 @@ import ActionButton from "@/components/ui/actionButton";
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import Link from "next/link";
-import { Code2, LineChart, ShieldCheck, Wand2 } from "lucide-react";
+import { Code2, LineChart, ShieldCheck, Wand2, GraduationCap, Rocket } from "lucide-react";
 import RedirectButton from "@/components/ui/redirectButton";
 import FAQs from "@/components/Faqs";
 import Marquee from "react-fast-marquee";
 
 export const metadata = {
-  title: "Cod Vista",
-  description: "A full-services digital transformation partner",
+  title: "Cod Vista - Leading Digital Solutions & Products",
+  description: "Cod Vista is a full-services digital transformation partner and product incubator, specializing in scalable web/app solutions and fintech platforms like FeeEase.",
   metadataBase: new URL("https://www.codvista.com"),
   openGraph: {
     images: ["https://www.codvista.com/logo.png"],
@@ -494,12 +494,8 @@ export default function App() {
                   gradient={false}
                 >
                   <div className="first flex gap-4 ml-4 py-5">
-                    {images.map((obj) => (
-                      <>
-                        {/* <span className="absolute -top-8 z-50 bg-white w-32 text-black text-center px-2 rounded-lg">
-                          {obj.name}
-                        </span> */}
-                        <div className="relative text-center bg-white w-20 h-20 rounded-xl cursor-pointer overflow-hidden filter grayscale hover:scale-125 hover:filter-none transition-all ease-in-out">
+                    {images.map((obj, idx) => (
+                      <div key={idx} className="relative text-center bg-white w-20 h-20 rounded-xl cursor-pointer overflow-hidden filter grayscale hover:scale-125 hover:filter-none transition-all ease-in-out">
                           {obj.url ? (
                             <Link href={`${obj.url}`} target="_blank">
                               <Image
@@ -520,7 +516,6 @@ export default function App() {
                             />
                           )}
                         </div>
-                      </>
                     ))}
                   </div>
                 </Marquee>
@@ -731,8 +726,49 @@ export default function App() {
                 </div>
               </div>
             </div>
+
+            {/* Our Products Section */}
+            <div id="products" className="py-20 border-t border-white/5 mx-auto">
+              <h2 className="text-3xl font-bold mb-12 text-center">Featured Products</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col md:flex-row gap-8 items-center text-left hover:bg-white/10 transition-all">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                      <GraduationCap className="text-blue-500" /> FeeEase
+                    </h3>
+                    <p className="text-gray-300 mb-6">
+                      A comprehensive ERP solution for school financial management, fee collection, and automated parent notifications via WhatsApp.
+                    </p>
+                    <div className="flex gap-4">
+                      <RedirectButton text="View Product" url="/products/feeease" />
+                    </div>
+                  </div>
+                  <div className="flex-1 w-full max-w-[300px] overflow-hidden rounded-xl">
+                    <Image
+                      src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=400&auto=format&fit=crop"
+                      alt="FeeEase"
+                      width={400}
+                      height={300}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+
+                <div className="bg-white/5 border border-white/10 border-dashed rounded-2xl p-8 flex items-center justify-center text-center opacity-50">
+                  <div>
+                    <Rocket className="text-gray-500 mb-4 mx-auto" size={40} />
+                    <h3 className="text-2xl font-semibold mb-2">More coming soon...</h3>
+                    <p className="text-gray-400">Transformative products currently in development.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-12 text-center">
+                <RedirectButton text="Explore All Products" url="/products" />
+              </div>
+            </div>
           </div>
         </main>
+
         {/* Faqs */}
         <div className="mx-auto py-8">
           <h1 className="text-3xl font-bold mb-4">

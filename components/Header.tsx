@@ -27,12 +27,11 @@ const Header = () => {
     setMenuOpen(!menuopen);
   };
   const services: Services[] = [
+    { title: "Our Products", url: "/products" },
     { title: "Our Services", url: "/services" },
-    // { title: "Contact Us", url: "/contact" },
     { title: "Privacy Policy", url: "/privacy-policy" },
     { title: "Refund Policy", url: "/refund-policy" },
     { title: "Terms of Services", url: "/terms-of-services" },
-    // { title: "Services", url: "/services" },
     { title: "About Us", url: "/about" },
   ];
 

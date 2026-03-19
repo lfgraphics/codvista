@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="z-20 w-full flex flex-col md:flex-row bg-[#18111c] rounded-xl border-t-2 border-t-purple-400">
           <div className="my-4 md:w-1/3 md:border-r-2 md:border-r-gray-500 pl-6 pr-6">
             <div className="my-4 md:w-1/3 ">
-              <img src="logo.svg" alt="logo" />
+              <img src="/logo.svg" alt="logo" />
             </div>
           </div>
           <div className="my-4 md:w-1/3 md:border-r-2 md:border-r-gray-500 pl-6">
@@ -55,6 +55,20 @@ const Footer = () => {
                 <Link href="/about" className="hover:text-blue-700">
                   About Us
                 </Link>
+              </li>
+              <li>
+                {insideBrowser && (
+                  <Link
+                    href={
+                      !window.location.href.includes("/")
+                        ? "#products"
+                        : "/#products"
+                    }
+                    className="hover:text-blue-700"
+                  >
+                    Our Products
+                  </Link>
+                )}
               </li>
               <li>
                 {insideBrowser && (
@@ -139,7 +153,7 @@ const Footer = () => {
         </div>
       </footer >
       <div className="attribute w-full p-2 text-center">
-        Copyright © 2025 Cod Vista - All rights reserved
+        Copyright © {new Date().getFullYear()} Cod Vista - All rights reserved
       </div>
     </>
   );

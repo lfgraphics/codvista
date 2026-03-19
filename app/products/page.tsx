@@ -1,126 +1,72 @@
-import Head from "next/head";
-import RedirectButton from "@/components/ui/redirectButton";
 import Container from "@/components/ui/container";
 import Image from "next/image";
+import { GraduationCap, Package } from "lucide-react";
+import RedirectButton from "@/components/ui/redirectButton";
 
 export const metadata = {
-  title: "Products | Cod Vista",
+  title: "Products | Cod Vista Digital Solutions",
   description:
-    "Explore Cod Vista's range of digital products in digital marketing, development, cybersecurity, and graphic design.",
+    "Explore our internally developed digital products and platforms designed to solve real-world problems.",
   metadataBase: new URL("https://www.codvista.com/products"),
-  openGraph: {
-    images: [
-      "https://images.unsplash.com/photo-1592609930961-219235eded71?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8c29mdHdhcmV8fHx8fHwxNzE2MjEyNjUz&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=800",
-    ],
-  },
 };
 
-export default function Products() {
+const ProductsPage = () => {
   return (
     <Container>
-      <div className="container mx-auto p-6">
-        <h1 className="text-4xl font-bold mb-6">Our Digital Products</h1>
+      <div className="py-20 text-center">
+        <h1 className="text-5xl font-bold mb-6">Our Products</h1>
+        <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-16">
+          Beyond our premium services, we build robust, scalable products that transform how organizations and businesses operate.
+        </p>
 
-        <div className="flex flex-col md:flex-row items-center mb-12 gap-6">
-          <div className="md:w-1/2">
-            <h2 className="text-3xl font-semibold mb-2">Development</h2>
-            <p className="mb-4">
-              At Cod Vista, we offer a wide range of development projects
-              including web development, mobile app development, and software
-              solutions. Our products are designed to enhance productivity and
-              streamline processes for businesses of all sizes.
-            </p>
-            <RedirectButton
-              text="Explore Development Products"
-              url="/products/dev"
-            />
-          </div>
-          <div className="md:w-1/2">
-            <Image
-              src="https://plus.unsplash.com/premium_photo-1675793715030-0584c8ec4a13?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZyZWUlMjBpbWFnZSUyMGRldmVsb3BlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
-              alt="Development"
-              width={800}
-              height={600}
-              className="rounded-lg"
-            />
-          </div>
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 
-        <div className="flex flex-col md:flex-row items-center mb-12 gap-6">
-          <div className="md:w-1/2 order-2 md:order-1">
-            <Image
-              src="https://plus.unsplash.com/premium_photo-1661389748409-0a8f74602f34?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZnJlZSUyMGltYWdlJTIwZGlnaXRhbCUyMG1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
-              alt="Digital Marketing"
-              width={800}
-              height={600}
-              className="rounded-lg"
-            />
+          {/* FeeEase Card */}
+          <div className="text-left bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all flex flex-col justify-between">
+            <div>
+              <div className="w-16 h-16 rounded-xl bg-blue-600 flex items-center justify-center mb-6">
+                <GraduationCap className="text-white" size={32} />
+              </div>
+              <h2 className="text-3xl font-bold mb-4">FeeEase</h2>
+              <p className="text-gray-400 mb-6 text-lg">
+                A comprehensive school management system designed to simplify fee collection, automate parent communication via WhatsApp, and manage accurate financial records.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-8">
+                <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-sm border border-blue-500/20">EdTech</span>
+                <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm border border-green-500/20">FinTech</span>
+                <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-sm border border-purple-500/20">SaaS</span>
+              </div>
+              <div className="rounded-xl overflow-hidden mb-8 border border-white/10">
+                <Image
+                  src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=600&auto=format&fit=crop"
+                  alt="FeeEase Preview"
+                  width={600}
+                  height={300}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <RedirectButton text="Live Demo" url="https://try.feeease.com" />
+              <RedirectButton text="View Details" url="/products/feeease" />
+            </div>
           </div>
-          <div className="md:w-1/2 order-1 md:order-2">
-            <h2 className="text-3xl font-semibold mb-2">Digital Marketing</h2>
-            <p className="mb-4">
-              Our digital marketing products include SEO tools, social media
-              marketing strategies, and comprehensive analytics platforms to
-              help you boost your online presence and reach your target audience
-              effectively.
-            </p>
-            <RedirectButton
-              text="Explore Digital Marketing Products"
-              url="/products/digital-marketing"
-            />
-          </div>
-        </div>
 
-        <div className="flex flex-col md:flex-row items-center mb-12 gap-6">
-          <div className="md:w-1/2">
-            <h2 className="text-3xl font-semibold mb-2">Cybersecurity</h2>
-            <p className="mb-4">
-              We offer advanced cybersecurity solutions to protect your digital
-              assets from threats. Our products include antivirus software,
-              encryption tools, and comprehensive security protocols to ensure
-              the safety of your data.
+          {/* Placeholder for future products */}
+          <div className="bg-white/5 border border-white/10 border-dashed rounded-2xl p-8 flex flex-col items-center justify-center text-center">
+            <div className="w-16 h-16 rounded-xl bg-gray-800 flex items-center justify-center mb-6 opacity-30">
+              <Package className="text-white" size={32} />
+            </div>
+            <h2 className="text-3xl font-bold mb-4 text-gray-500 italic">More Products Coming Soon</h2>
+            <p className="text-gray-600 mb-6 text-lg">
+              We're currently developing more internal platforms to solve complex challenges in E-commerce, Healthcare, and beyond. Stay tuned!
             </p>
-            <RedirectButton
-              text="Explore Cybersecurity Products"
-              url="/products/cybersecurity"
-            />
           </div>
-          <div className="md:w-1/2">
-            <Image
-              src="https://images.unsplash.com/photo-1655036387197-566206c80980?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnJlZSUyMGltYWdlJTIwY3liZXIlMjBzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
-              alt="Cybersecurity"
-              width={800}
-              height={600}
-              className="rounded-lg"
-            />
-          </div>
-        </div>
 
-        <div className="flex flex-col md:flex-row items-center mb-12 gap-6">
-          <div className="md:w-1/2 order-2 md:order-1">
-            <Image
-              src="https://plus.unsplash.com/premium_photo-1661284886711-4eaee4fa7771?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z3JhcGhpYyUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600"
-              alt="Graphic Design"
-              width={800}
-              height={600}
-              className="rounded-lg"
-            />
-          </div>
-          <div className="md:w-1/2 order-1 md:order-2">
-            <h2 className="text-3xl font-semibold mb-2">Graphic Design</h2>
-            <p className="mb-4">
-              Our graphic design products include design software, templates,
-              and creative assets that enable you to create stunning visuals for
-              your projects. Whether you're a professional designer or a
-              beginner, we have something for you.
-            </p>
-            <RedirectButton
-              text="Explore Graphic Design Products"
-              url="/products/graphic-design"
-            />
-          </div>
         </div>
       </div>
     </Container>
   );
-}
+};
+
+export default ProductsPage;
