@@ -27,8 +27,8 @@ const FeeEasePage = () => {
               The smartest way to handle fee collections, automated notifications, and student financial records. Built for modern educational institutions.
             </p>
             <div className="flex gap-4">
-              <RedirectButton text="Live Demo" url="https://feeease.in" />
-              <RedirectButton text="Get Started" url="/contact" />
+              <RedirectButton text="Live Demo" url="https://feeease.com" />
+              <RedirectButton text="Get Started" url="https://feeease.com/get-started" />
             </div>
           </div>
           <div className="flex-1 relative">
@@ -122,7 +122,7 @@ const FeeEasePage = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join hundreds of schools that have simplified their finances and improved parent satisfaction with FeeEase.
           </p>
-          <RedirectButton text="Speak to an Expert" url="https://feeease.com/contactus" />
+          <RedirectButton text="Speak to an Expert" url="/contact" />
         </div>
       </div>
     </Container>
